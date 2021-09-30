@@ -1,0 +1,78 @@
+/*Para a estilização de padding e margin tempos 4 formas de definir os seus tamanhos.
+
+.nome{
+    padding: 10px //Define 10px de padding superior, inferior, esquerdo e direito.
+
+    padding: 10px 5px //Define 10px de padding superior e inferior, e 5px de padding esquerdo e direito. 
+
+    padding: 15px 10px 5px 0 // Define o padding da seguinte forma: 15px superior, 10px para a esquerda, 5px para o inferior e 0px para a direita.
+
+    O mesmo de cima pode ser feito da seguinte forma.
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 0;
+
+    Essa última forma serve para caso queiramos modificar apenas um dos elementos ceteris paribus ou modificar dois elementos ceteris paribus.
+*/
+
+.nome{
+    color: blueviolet;
+    margin-top: 20px;
+    border: 2px solid crimson;
+    background-color: darkgray;
+}
+
+#name1{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#name2{
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+/*O background também é um composto de declarações.
+
+.nome{
+    background: green url('test.jpg') top;
+
+    background-color: green;
+    background-image: url ("test.jpg");
+    background-position: top;
+}
+
+As definições de cores podem ser feitas por:
+    nome pré-determinado como green;
+    valor hexadecimal como #00800;ou
+    valor rgb ou rgba sendo r de red, g de green, b de blue (esses valores de 0 até 255) e o a de alpha (esse de 0 a 1 ou 0% a 100%) 
+*/
+
+/*As bordas também podem ser divididas como o padding e margin, com definições para top, right, bottom, left. Contudo, dentro de cada um dessas declarações (incluindo o border puro) há outras definições incluidas. Exemplo alterando o elemento do html de fato*/
+
+#name2{
+    /* border: tamanho estilo cor; */
+    border-top: 10px dashed rgba(0, 0, 0, 1);
+    border-bottom: 5px dotted rgb(0, 0, 200);
+}
+
+/*As declarações compostas dentro de border são:
+#name{
+    border: 10px dashed rgba(0, 0, 0, 1);
+    border-width: 10px;
+    border-style: dashed;
+    border-color:  rgba(0, 0, 0, 1);
+
+    Para estilizar partes separadas é só escrever assim:
+    border-top-width: 10px;
+    border-right-style: dashed;
+    border-bottom-color:  rgba(0, 0, 0, 1);
+}
+*/
+
+/*Por fim temos a declaração do border radius que é o arredondamento das bordas. Segue-se o mesmo estilo dos anteriores:
+    border-radius: 50%; //altera para 50% o radius superior, inferior, direita e esquerda.
+    border-radius: 50% 10%; //Altera para 50% o radius superior e inferior, para 10% o raius da direita e esquerda.
+    border-radius: 50% 40% 30% 20%; //Altera o radius superior para 50%, o da direita para 40%, o inferior para 30% e o da esquerda para 20%.    
+*/
