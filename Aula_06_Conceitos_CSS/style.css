@@ -1,0 +1,35 @@
+/*Uma regra CSS é representada da seguinte forma:
+
+tag, Aqui é o seletor, a tag a ser selecionada, ou as tags, separadas por virgula.
+tag {
+    propriedade: valor; Uma declaração é composta por uma propriedade com um valor atribuido.
+    SEMPRE POR PONTO VIRGULA NO FINAL, as declarações são sepadas por ';' e são finalizadas pelo mesmo.
+}
+*/
+
+.nome{
+    color: blueviolet;
+}
+
+/* Apesar de ser possível usar dois id em uma mesma classe, apenas o primeiro declarado no html funcionará.*/
+#nome{
+    font-size: larger;
+}
+
+#name{
+    font-weight: bolder;
+}
+
+/*O navegador representa os elementos HTML em caixas retangulares que são dividos em 4 elementos (de fora pra dentro):
+    margin: que determina a distancia entre elementos;
+    border: é uma borda que cerca o padding e o content;
+    padding: determina a distancia entre o content e o border,
+    content: o conteúdo do elemento.
+*/
+
+.nome{
+    margin: 20px;
+    border: 2px solid crimson;
+    padding: 10px;
+    background-color: darkgray;
+}
