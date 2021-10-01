@@ -1,3 +1,5 @@
+/*ESTILIZANDO TAGS*/
+
 /*Para a estilização de padding e margin tempos 4 formas de definir os seus tamanhos.
 
 .nome{
@@ -76,3 +78,58 @@ As definições de cores podem ser feitas por:
     border-radius: 50% 10%; //Altera para 50% o radius superior e inferior, para 10% o raius da direita e esquerda.
     border-radius: 50% 40% 30% 20%; //Altera o radius superior para 50%, o da direita para 40%, o inferior para 30% e o da esquerda para 20%.    
 */
+
+/*---------------------------------------*/
+
+/*ESTILIZANDO TEXTO*/
+/*A primeira declaração para estudo é o font-family.
+
+    font-family: Verdana; //Determina uma fonte
+
+    font-family: Verdana, Arial; //Determina duas fontes, a primeira é a base e a segunda é para caso a primeira não funcione
+
+Agora vamos para font-size, que determina o tamanho da fonte. Ela pode ser determinada em: px, em, rem, pt, pc, ex, dentre outros.
+
+    font-size: 12px; //Determina o tamanho da fonte em 12 pixels.
+
+O font-style determina o estilo da fonte: itálico ou obliquo.
+
+    font-style: oblique; //Determina o estilo da fonte como obliquo.
+
+    
+Font-weight dertermina o peso de uma fonte: normal ou negrito.
+
+    font-weight: bold; //Deixa o texto como negrito.
+
+O text-transform altera a forma da letra: maiúscula ou minúscula.
+
+    text-transform: uppercase; //Todas as letras em maíuscula.
+
+    text-transform: lowercase; //Todas as letras minúsculas
+
+    text-transform: capitalize; //Todas as primeiras letras de cada palavra em maiúsculas.
+
+Para colocarmos uma linha sublinhada ou riscada usa-se o text-decoration.
+
+    text-decoration: underline; //Linha sublinhada no texto
+
+    text-decoration: overline; //Linha acima do texto
+
+    text-decoration: line-through; //Texto riscado com uma linha.
+*/
+
+/*---------------------------------------*/
+
+/*ESTILIZANDO LISTAS*/
+
+/*Tanto lista ordernada (ol) como as não ordenadas (ul) podem ser estilizadas usando a declaração list-style-type. Alguns exemplos:
+
+    list-style-type: square; //Deixa os marcadores das listas não ordenadas como quadrado.
+    
+    list-style-type: upper-roman; //Deixa os marcadores como letras romanas em listas ordenadas.
+
+O marcador também pode ser uma imagem usando o list-style-image
+
+    list-style-image: url('teste.jpg'); //Seleciona uma imagem como marcador de lista.
+
+    */
