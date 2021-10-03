@@ -444,3 +444,225 @@ Os valores para a propriedade são:
     flex: 0;
     align-items: center;
 }
+
+/* -------------------------------------------*/
+/* PARTE 7 - ALIGN CONTENT */
+/*Faz o alinhamento das linhas em relação ao eixo vertical do container.*/
+/*Para o align content funcione precisa-se que o container quebre as linhas e a altura seja maior que a soma das linhas dos itens.*/
+/*Os valores para essa propriedade são: 
+    center: items alinhados no centro;
+    strecth (default): os itenes crescem igualmente;
+    flex-start: alinhados ao início do container;
+    flex-end: alinhados ao final do container;
+    space-between: cria um espaçamento igual entre os elementos;
+    space-around: os espaçamentos do meio são duas vezes maiores que o inicial e o final.
+*/
+/*Vamos para a pratica*/
+
+#parte07{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte07 .flex-container{
+    margin: 0;
+    height: 400px;
+    /* max-width: 300px; */
+    display: flex;
+    flex-wrap: wrap;
+    background:yellow;
+}
+
+#parte07 .flex-item{
+    margin: 5px;
+    padding: 0 5px;
+    background:orange;
+    flex: 1;
+    color: black;
+    text-align: center;
+}
+#parte07 .row-strecth{
+    
+    align-content: stretch;
+}
+
+#parte07 .row-center{
+    
+    align-content: center;
+}
+
+#parte07 .row-flex-start{
+    
+    align-content: flex-start;
+}
+
+#parte07 .row-flex-end{
+    
+    align-content: flex-end;
+}
+
+#parte07 .row-space-between{
+    
+    align-content: space-between;
+}
+
+#parte07 .row-space-around{
+    
+    align-content: space-around;
+}
+
+#parte07 .column-stretch{
+    
+    flex-direction: column;
+    align-content: stretch;
+}
+
+#parte07 .column-center{
+    
+    flex-direction: column;
+    align-content: center;
+}
+
+#parte07 .column-flex-start{
+    
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+#parte07 .column-flex-end{
+    
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+#parte07 .column-space-between{
+    
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#parte07 .column-space-around{
+    
+    align-content: space-around;
+}
+
+#parte07 .row-reverse-strecth{
+    
+    flex-direction: row-reverse;
+    align-content: stretch;
+}
+
+#parte07 .row-reverse-center{
+    
+    flex-direction: row-reverse;
+    align-content: center;
+}
+
+#parte07 .row-reverse-flex-start{
+    
+    flex-direction: row-reverse;
+    align-content: flex-start;
+}
+
+#parte07 .row-reverse-flex-end{
+    
+    flex-direction: row-reverse;
+    align-content: flex-end;
+}
+
+#parte07 .row-reverse-space-between{
+    
+    flex-direction: row-reverse;
+    align-content: space-between;
+}
+
+#parte07 .row-reverse-space-around{
+    
+    flex-direction: row-reverse;
+    align-content: space-around;
+}
+
+#parte07 .column-reverse-stretch{
+    
+    flex-direction: column-reverse;
+    align-content: stretch;
+}
+
+#parte07 .column-reverse-center{
+    
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+#parte07 .column-reverse-flex-start{
+    
+    flex-direction: column-reverse;
+    align-content: flex-start;
+}
+
+#parte07 .column-reverse-flex-end{
+    
+    flex-direction: column-reverse;
+    align-content: flex-end;
+}
+
+#parte07 .column-reverse-space-between{
+    
+    flex-direction: column-reverse;
+    align-content: space-between;
+}
+
+#parte07 .column-reverse-space-around{
+    
+    flex-direction: column-reverse;
+    align-content: space-around;
+}
+
+#parte07 .row-strecth,
+#parte07 .row-center,
+#parte07 .row-flex-start,
+#parte07 .row-flex-end,
+#parte07 .row-space-between,
+#parte07 .row-space-around,
+#parte07 .row-reverse-strecth,
+#parte07 .row-reverse-center,
+#parte07 .row-reverse-flex-start,
+#parte07 .row-reverse-flex-end,
+#parte07 .row-reverse-space-between,
+#parte07 .row-reverse-space-around{
+    max-width: 300px;
+}
+
+
+#parte07 .column-stretch .flex-item,
+#parte07 .column-center .flex-item,
+#parte07 .column-flex-start .flex-item,
+#parte07 .column-flex-end .flex-item,
+#parte07 .column-space-between .flex-item,
+#parte07 .column-space-around .flex-item,
+#parte07 .column-reverse-stretch .flex-item,
+#parte07 .column-reverse-center .flex-item,
+#parte07 .column-reverse-flex-start .flex-item,
+#parte07 .column-reverse-flex-end .flex-item,
+#parte07 .column-reverse-space-between .flex-item,
+#parte07 .column-reverse-space-around .flex-item{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#parte07 .column-stretch,
+#parte07 .column-center,
+#parte07 .column-flex-start,
+#parte07 .column-flex-end,
+#parte07 .column-space-between,
+#parte07 .column-space-around,
+#parte07 .column-reverse-stretch,
+#parte07 .column-reverse-center,
+#parte07 .column-reverse-flex-start,
+#parte07 .column-reverse-flex-end,
+#parte07 .column-reverse-space-between,
+#parte07 .column-reverse-space-around{
+    max-width: 550px;
+}
