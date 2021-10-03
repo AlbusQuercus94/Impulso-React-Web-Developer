@@ -133,3 +133,86 @@ OBS: quebra de linha é o item descer para a proxima linha quando não couber na
 #parte03 .wrap-reverse{
     flex-wrap: wrap-reverse;
 }
+
+/*---------------------------------------------*/
+
+/*PARTE 4 FLEX FLOW*/
+/*Flex flow é uma abreviação de flex direction e flex wrap. É o mesmo que ocorre com background, que é uma abreviação de background: color, image, position, size, repeat, origin, clip e attachment.
+O flex flow não é usado muito pois o raramente se altera o flex-wrap.*/
+
+#parte04 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte04 .flex-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    height: 120px;
+    background: aquamarine;
+}
+
+#parte04 .flex-item{
+    margin: 5px;
+    background:chartreuse;
+    height: 50px;
+    min-width: 100px;
+    height: 50px;
+    line-height: 25px;
+    font-size: 20px;
+    color: rgb(105, 105, 105);
+    text-align: center;
+    margin: 5px;
+}
+
+#parte04 .row-nowrap{
+    flex-flow: row nowrap;
+}
+
+#parte04 .row-wrap{
+    flex-flow: row wrap;
+}
+
+#parte04 .rowreverse-nowrap{
+    flex-flow: row-reverse nowrap;
+}
+
+#parte04 .rowreverse-wrap{
+    flex-flow: row-reverse wrap;
+}
+
+#parte04 .row-wrapreverse{
+    flex-flow: row wrap-reverse;
+}
+
+#parte04 .rowreverse-wrapreverse{
+    flex-flow: row-reverse wrap-reverse;
+}
+
+#parte04 .column-nowrap{
+    flex-flow: column nowrap;
+}
+
+#parte04 .column-wrap{
+    flex-flow: column wrap;
+}
+
+#parte04 .columnreverse-nowrap{
+    flex-flow: column-reverse nowrap;
+}
+
+#parte04 .columnreverse-wrap{
+    flex-flow: column-reverse wrap;
+}
+
+#parte04 .column-wrapreverse{
+    flex-flow: column wrap-reverse;
+}
+
+#parte04 .columnreverse-wrapreverse{
+    flex-flow: column-reverse wrap-reverse;
+}
