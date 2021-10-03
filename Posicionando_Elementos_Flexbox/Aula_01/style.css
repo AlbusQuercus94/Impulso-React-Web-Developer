@@ -1,0 +1,26 @@
+/*Flex Container*/
+
+body{
+    display: flex; /*Transforma todos os seus itens filhos em itens flex.*/
+}
+
+/*As propriedades relacionadas ao Flex Container são as seguintes:
+    display; //inicializador
+    flex-direction; direcionamento dos itens: linha ou coluna
+    flex-wrap; quebra de linha ou não;
+    flex-flow; abreviação pro direct e o wrap
+    justify-content; alinhar os itens de acordo com a direção
+    align-items; alinhar os itens de acordo com o eixo do container
+    align-content; alinha as linhas.
+*/
+
+/*Flex Items são o filhos do Flex Container.*/
+/*As propriedades relacionadas aos flex items são:
+    flex-grow; definir o fator de crescimento
+    flex-basis; definir o tamanho inicial do item antes da distribuição do espaço restante do container
+    flex-shrink; definir a capacidade de redução
+    flex; abreviação dos três anteriores.
+    order; relacionado a ordem de distribuilç~ça
+    align-self; alinhamento especifico do container.
+
+*/
