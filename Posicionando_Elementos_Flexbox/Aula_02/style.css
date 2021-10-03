@@ -620,6 +620,8 @@ Os valores para a propriedade são:
     align-content: space-around;
 }
 
+/*Para o conteúdo aparecer como eu queria, eu tive que juntar todas os container row e especificar o tamanho deles aqui.*/
+
 #parte07 .row-strecth,
 #parte07 .row-center,
 #parte07 .row-flex-start,
@@ -635,22 +637,7 @@ Os valores para a propriedade são:
     max-width: 300px;
 }
 
-
-#parte07 .column-stretch .flex-item,
-#parte07 .column-center .flex-item,
-#parte07 .column-flex-start .flex-item,
-#parte07 .column-flex-end .flex-item,
-#parte07 .column-space-between .flex-item,
-#parte07 .column-space-around .flex-item,
-#parte07 .column-reverse-stretch .flex-item,
-#parte07 .column-reverse-center .flex-item,
-#parte07 .column-reverse-flex-start .flex-item,
-#parte07 .column-reverse-flex-end .flex-item,
-#parte07 .column-reverse-space-between .flex-item,
-#parte07 .column-reverse-space-around .flex-item{
-    max-width: 250px;
-    max-height: 250px;
-}
+/*Assim como tive que especificar a largura maxima das container column um pouco maior, para que ficasse visivelmente agradáveis de se ver, pois os itens acabavam vazando do container*/
 
 #parte07 .column-stretch,
 #parte07 .column-center,
@@ -666,3 +653,6 @@ Os valores para a propriedade são:
 #parte07 .column-reverse-space-around{
     max-width: 550px;
 }
+
+
+
