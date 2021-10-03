@@ -216,3 +216,90 @@ O flex flow não é usado muito pois o raramente se altera o flex-wrap.*/
 #parte04 .columnreverse-wrapreverse{
     flex-flow: column-reverse wrap-reverse;
 }
+
+/*------------------------------------*/
+
+/* PARTE 5 - JUSTIFY CONTENT */
+/* Alinha os itens dentro do Flex Container de acordo com a direção do flex direction.
+   Não adianta usar essa propriedae em um container sem espaço faltando, já que ele serve para distribuir o espaço restante para organizar os flex items.
+   Os valores usados no justify content são (retirados do vídeo):
+    flex-start: início do container;
+    flex-end: final do container;
+    center: ao centro do container;
+    space-between: cria um espaçamento igual entre os elementos;
+    space-around: os espaçamentos do meio são duas vezes maiores que o inicial e o final.
+*/
+
+#parte05 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte05 .flex-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    height: 300px;
+    background:black;
+}
+
+#parte05 .flex-item{
+    margin: 5px;
+    background:greenyellow;
+    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
+    line-height: 25px;
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+    margin: 5px;
+}
+
+#parte05 .row-flexstart{
+    justify-content: flex-start;
+}
+
+#parte05 .row-flexend{
+    justify-content: flex-end;
+}
+
+#parte05 .row-center{
+    justify-content: center;
+}
+
+#parte05 .row-space-between{
+    justify-content: space-between;
+}
+
+#parte05 .row-space-around{
+    justify-content: space-around;
+}
+
+#parte05 .column-flexstart{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#parte05 .column-flexend{
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#parte05 .column-center{
+    flex-direction: column;
+    justify-content: center;
+}
+
+#parte05 .column-space-between{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#parte05 .column-space-around{
+    flex-direction: column;
+    justify-content: space-around;
+}
