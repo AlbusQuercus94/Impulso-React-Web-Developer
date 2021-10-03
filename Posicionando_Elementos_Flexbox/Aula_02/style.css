@@ -303,3 +303,134 @@ O flex flow não é usado muito pois o raramente se altera o flex-wrap.*/
     flex-direction: column;
     justify-content: space-around;
 }
+
+/*----------------------------------------------------*/
+/* PARTE 6 - ALIGN ITEMS */
+/*Essa propriedade alinha os itens flex de acordo com o eixo do flex container. O alinhamento por essa propriedade não precisa da determinação da altura.
+Os valores para a propriedade são:
+    center: items alinhados no centro;
+    strecth (default): os itenes crescem igualmente;
+    flex-start: alinhados ao início do container;
+    flex-end: alinhados ao final do container;
+    baseline: (de acordo com a aula) alinhamento de acordo com a linha base da tipografia dos itens.
+*/
+
+/*Agora indo para a pratica:*/
+
+#parte06 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte06 .flex-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    background:grey;
+}
+
+#parte06 .flex-item{
+    margin: 5px;
+    background:pink;
+    min-width: 100px;
+    line-height: 25px;
+    font-size: 20px;
+    color: rebeccapurple;
+    text-align: center;
+    margin: 5px;
+}
+
+#parte06 .row-strecth{
+    align-items: stretch;
+}
+
+#parte06 .row-center{
+    align-items: center;
+}
+
+#parte06 .row-flex-start{
+    align-items: flex-start;
+}
+
+#parte06 .row-flex-end{
+    align-items: flex-end;
+}
+#parte06 .row-baseline{
+    align-items: baseline;
+}
+
+#parte06 .column-stretch{
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#parte06 .column-center{
+    flex-direction: column;
+    align-items: center;
+}
+
+#parte06 .column-flex-start{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#parte06 .column-flex-end{
+    flex-direction: column;
+    align-items: flex-end;
+}
+#parte06 .column-baseline{
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#parte06 .row-reverse-stretch{
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+
+#parte06 .row-reverse-center{
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#parte06 .row-reverse-flex-start{
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+#parte06 .row-reverse-flex-end{
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+#parte06 .row-reverse-baseline{
+    flex-direction: row-reverse;
+    align-items: baseline;
+}
+
+#parte06 .column-reverse-stretch{
+    flex-direction: column-reverse;
+    align-items: stretch;
+}
+
+#parte06 .column-reverse-center{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#parte06 .column-reverse-flex-start{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+
+#parte06 .column-reverse-flex-end{
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+#parte06 .column-reverse-baseline{
+    flex-direction: column-reverse;
+    align-items: baseline;
+}
