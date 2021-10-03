@@ -434,3 +434,13 @@ Os valores para a propriedade são:
     flex-direction: column-reverse;
     align-items: baseline;
 }
+/*Usando o justify content em um dos filhos do flex container e então pegando o filho do item, é possivel fazer o conteúdo ficar no centro.*/
+#parte06 .total{
+    height: 300px;
+    justify-content: center;
+}
+
+#parte06 .total .flex-item{
+    flex: 0;
+    align-items: center;
+}
