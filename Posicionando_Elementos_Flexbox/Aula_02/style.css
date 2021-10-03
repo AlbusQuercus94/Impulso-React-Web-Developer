@@ -1,0 +1,22 @@
+/*Parte 1 - 'Display flex;'
+Essa propriedade transforma a tag em um flex container. É necessária para poder usar todas as outras propriedades relacionadas ao flex container.
+Pode ser aplicada a qualquer tipo de tag.
+*/
+
+.flex{
+    max-width: 300px;
+    padding: 16px;
+    border: 2px solid black;
+}
+
+.item{
+    background-color: aqua;
+    margin: 5px;
+}
+
+.flex-com{
+    width: 300px;
+    padding: 16px;
+    border: 2px solid black;
+    display: flex; /* Transforma os itens em flex e ocupando o espaço proporcional do conteúdo de cada um.*/
+}
