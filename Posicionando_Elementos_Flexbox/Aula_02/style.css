@@ -78,3 +78,58 @@ Oso flex direction tem os seguintes valores:
 #parte02 .column-reverse{
     flex-direction: column-reverse;
 }
+
+/*------------------------------------------*/
+/*PARTE 03 - FLEX WRAP*/
+
+/*Define a quebra de linhas dos flex itens. Por padrão os itens ficam contidos até o limite do conteúdo.
+OBS: quebra de linha é o item descer para a proxima linha quando não couber na linha atual. Por padrão ele extrapola a largura máxima do container para caber na mesma linha.*/
+
+/*Os valores para o flex wrap são:
+    nowrap(default): não permite quebra de linha.
+    wrap: permite a quebra de linha quando extrapolar a largura do item. Porém, se houver um limite de altura, vai haver vazamento de conteúdo;
+    wrap-reverse: é o mesmo que o anterior, mas revertido, contudo, quando houver quebra de linha, todo conteúdo vai para a proxima linha e o novo na linha atual.
+*/
+/*Exemplos do flex wrap*/
+
+#parte03 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte03 .flex-container,
+#parte03 .column{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    
+    height: 120px;
+    background: red;
+    
+}
+
+#parte03 .column{
+    flex-direction: column;
+}
+
+#parte03 .flex-item{
+    background: black;
+    height: 50px;
+    min-width: 100px;
+    line-height: 25px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+#parte03 .wrap{
+    flex-wrap: wrap;
+}
+
+#parte03 .wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
