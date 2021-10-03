@@ -3,20 +3,78 @@ Essa propriedade transforma a tag em um flex container. É necessária para pode
 Pode ser aplicada a qualquer tipo de tag.
 */
 
-.flex{
+#parte01 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte01 .flex{
     max-width: 300px;
     padding: 16px;
     border: 2px solid black;
 }
 
-.item{
+#parte01 .item{
     background-color: aqua;
     margin: 5px;
 }
 
-.flex-com{
+#parte01 .flex-com{
     width: 300px;
     padding: 16px;
     border: 2px solid black;
     display: flex; /* Transforma os itens em flex e ocupando o espaço proporcional do conteúdo de cada um.*/
+}
+/*---------------------------------------------*/
+
+/*Parte 2 - Flex Direction*/
+
+/* Estabelece a direção do flex container: em linha ou em coluna.
+Oso flex direction tem os seguintes valores:
+    row(default): direção em linha da esquerda para a direita;
+    row-reverse: direção em linha da direita para a esquerda;
+    column: direção em coluna de cima para baixo, coluna única;
+    column-reverse: direção em coluna de baixo para cima, coluna única
+*/
+
+/*Usando exemplos:*/
+
+#parte02 {
+    border: 5px solid black;
+    width: 400px;
+    padding: 5px;
+    margin: 20px 0px; 
+}
+
+#parte02 .flex-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    
+}
+
+#parte02 .flex-item{
+    background: blue;
+    height: 50px;
+    width: 50px;
+    line-height: 25px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+#parte02 .row-reverse{
+    flex-direction: row-reverse;
+}
+
+#parte02 .column{
+    flex-direction: column;
+}
+
+#parte02 .column-reverse{
+    flex-direction: column-reverse;
 }
