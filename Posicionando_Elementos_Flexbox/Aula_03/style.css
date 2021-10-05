@@ -1,0 +1,46 @@
+/* PARTE 01 - FLEX GROW */
+/*Nessa aula é um estudo com as propriedades relacionadas aos itens flexs.
+O flex-grow define a proporção que os elementos irão crescer. Não fuciona em containers com alinhamento pela propriedade justify content.
+Os valores para a propriedade flex grow são apenas números.*/
+
+#parte01{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+
+#parte01 .flex-container{
+    display: flex;
+    margin: 0;
+    width: 400px;
+    background: burlywood;
+}
+
+#parte01 .flex-item{
+    margin: 5px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+}
+
+#parte01 .flex-grow .item01 {
+    flex-grow: 10;
+}
+
+/*Aqui eu separei e agrupei os items para ficar mais fácil digitar o código.*/
+
+#parte01 .flex-grow .item02,
+#parte01 .flex-grow .item03,
+#parte01 .flex-grow .item04,
+#parte01 .flex-grow .item05{
+    flex-grow: 1;
+}
+
+
+#parte01 .flex-grow-justify-content{
+    justify-content: center;
+    flex-grow: 10;
+}
