@@ -14,12 +14,12 @@ Os valores para a propriedade flex grow são apenas números.*/
 #parte01 .flex-container{
     display: flex;
     margin: 0;
-    width: 400px;
+    width: 600px;
     background: burlywood;
 }
 
 #parte01 .flex-item{
-    margin: 5px;
+    margin: -1px;
     padding: 0px;
     border: 3px solid cadetblue;
     color: rgb(4, 112, 112);
@@ -27,7 +27,7 @@ Os valores para a propriedade flex grow são apenas números.*/
 }
 
 #parte01 .flex-grow .item01 {
-    flex-grow: 10;
+    flex-grow: 4;
 }
 
 /*Aqui eu separei e agrupei os items para ficar mais fácil digitar o código.*/
@@ -36,11 +36,136 @@ Os valores para a propriedade flex grow são apenas números.*/
 #parte01 .flex-grow .item03,
 #parte01 .flex-grow .item04,
 #parte01 .flex-grow .item05{
-    flex-grow: 1;
+    flex-grow: 2;
+}
+
+/*Adendo: o justify content não altera em nada o conteúdo do flex container. O que ocorre é o oposto do que eu pensava: o flex grow desabilita o justify content e não o inverso.*/
+#parte01 .flex-grow-justify-content{
+    justify-content: center;
+}
+
+#parte01 .flex-grow-justify-content .item01{
+    flex-grow: 4;
+}
+
+#parte01 .flex-grow-justify-content .item02,
+#parte01 .flex-grow-justify-content .item03,
+#parte01 .flex-grow-justify-content .item04,
+#parte01 .flex-grow-justify-content .item05{
+    flex-grow: 2;
+}
+
+#parte01 .flex-grow-justify-content02{
+    justify-content: center;
+    flex-grow: 0;
+}
+
+/* ------------------------------------------------------ */
+/* PARTE 2 - FLEX BASIS */
+/*Define o tamanho do item antes do espaço ser distribuido. Em outras palavras: primeiro define-se o tamanho do item, esse item pega o seu conteúdo e determina-o como a base, e quando houver a distribuição do espaço, o primeiro valor vai ser mantido mais o espaçamento feito.*/
+
+/*Os valores possíveis para essa propriedade são: 
+    auto: o tamanho é determinado proporcialmente ao conteúdo do item;
+    (qualquer valor númerico com qualquer únidade possível: px, em, %)
+    quando o valor determinado é zero (0) a relação é a mesma com o flex-grow*/
+
+/*Vamos pra a pratica para fixar*/
+
+#parte02{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
 }
 
 
-#parte01 .flex-grow-justify-content{
-    justify-content: center;
-    flex-grow: 10;
+#parte02 .flex-container{
+    display: flex;
+    margin: 0;
+    width: 600px;
+    background: burlywood;
+}
+
+#parte02 .flex-item{
+    margin: -1px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+    
+}
+
+
+/*Aqui, mesmo tendo espaço, o valor adicional vai tentar manter a largura máxima do item.*/
+
+/*O flex item sem o flex grow limita o seu conteúdo ao tamanho do flex basis.*/
+
+/*Contudo, ao adicionar um valor ao flex grow, o item tem sua largura acrescida até que ocupe o espaço do container todo. Ao chegar aos fim do tamanho do container, a largura para de crescer.*/
+
+#parte02 .flex-basis .item01,
+#parte02 .flex-basis .item02,
+#parte02 .flex-basis .item03,
+#parte02 .flex-basis .item04,
+#parte02 .flex-basis .item05{
+    flex-grow: 1;
+    flex-basis: 100px;
+}
+
+/*Define um tamanho para item flex*/
+#parte02 .flex-basis-numeral .item01{
+    flex-basis: 50px;
+    flex-grow: 1;
+}
+#parte02 .flex-basis-numeral .item02{
+    flex-basis: 120px;
+}
+
+#parte02 .flex-basis-numeral .item03{
+    flex-basis: 120px;
+}
+
+#parte02 .flex-basis-numeral .item04{
+    flex-basis: 100px;
+}
+
+#parte02 .flex-basis-numeral .item05{
+    flex-basis: 80px;
+}
+
+/*Flex basis Zerado*/
+
+#parte02 .flex-basis-zero .item01{
+    flex-basis: 50px;
+}
+#parte02 .flex-basis-zero .item02{
+    flex-basis: 120px;
+}
+
+#parte02 .flex-basis-zero .item03{
+    flex-basis: 120px;
+}
+
+#parte02 .flex-basis-zero .item04{
+    flex-basis: 100px;
+}
+
+#parte02 .flex-basis-zero .item05{
+    flex-basis: 80px;
+}
+
+/*TESTES EM NOME DA CIÊNCIA*/
+#parte02 .flex-basis-numeral3{
+    width: 100px;
+}
+/*Quando o container tem um tamanho menor que o tamanho do item, o flex-basis faz o item ter no máximo a largura do container.*/
+#parte02 .flex-basis-numeral3 .item01{
+    flex-basis: 200px;
+}
+
+#parte02 .flex-basis-numeral4{
+    width: 100px;
+}
+/*A diferença entre este e o anterior é que este daqui distribui melhor o conteúdo interno, enquanto no exemplo anterior parece que o conteúdo está comprimido.*/
+#parte02 .flex-basis-numeral4 .item01{
+    flex-basis: 0;
 }
