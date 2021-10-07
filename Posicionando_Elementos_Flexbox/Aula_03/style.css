@@ -169,3 +169,89 @@ Os valores para a propriedade flex grow são apenas números.*/
 #parte02 .flex-basis-numeral4 .item01{
     flex-basis: 0;
 }
+
+/* ------------------------------------------- */
+/* PARTE EXTRA */
+#parteextra{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+
+#parteextra .flex-container{
+    display: flex;
+    margin: 0;
+    width: 600px;
+    background: burlywood;
+}
+
+#parteextra .flex-item{
+    margin: -1px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+}
+#parteextra .flex-shrink .item01{
+    width: 348px;
+    /* flex-shrink: 5; */
+}
+
+#parteextra .flex-shrink .item02{
+    width: 252px;
+    /* flex-shrink: 3; */
+}
+
+#parteextra .flex-shrink2 .item01,
+#parteextra .flex-shrink2 .item02,
+#parteextra .flex-shrink2 .item03{
+    width: 150px;
+}
+#parteextra .flex-shrink2 .item04{
+    width: 333px;
+}
+
+/* ------------------------------------------- */
+
+
+/* PARTE 3 - FLEX SHRINK */
+/*O flex shrink é o oposto do flex grow. Se o grow você determina o a proporção de crescimento do item, o flex shrink determina a proporção de diminuiçãio.*/
+/*Assim como o grow, o flex shrink só tem valores numéricos.*/
+
+#parte03{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+
+#parte03 .flex-container{
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    width: 600px;
+    background: burlywood;
+}
+
+#parte03 .flex-item{
+    margin: -1px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+    flex-grow: 1;
+}
+
+/*Quando o flex-shrink é igualado a zero, é a definição de que o item não pode diminuir de tamanho, fazendo com que os itens vazem do container*/
+#parte03 .flex-shrink2 .flex-item{
+    flex-basis: 100px;
+    flex-shrink: 0;
+}
+
+#parte03 .flex-shrink-active .flex-item{
+    flex-basis: 100px;
+    flex-shrink: 2;
+}

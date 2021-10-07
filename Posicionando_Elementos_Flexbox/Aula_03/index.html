@@ -72,5 +72,67 @@
             <div class="flex-item item05">Item 05</div>
         </div>
     </section>
+
+    <section id="parteextra">
+        <h3>Compreendendo mais um pouco</h3>
+        <div class="flex-container flex-shrink">
+            <div class="flex-item item01">Width 348 = 58% de 600</div>
+            <div class="flex-item item02">Width 252 = 42% de 600</div>
+        </div>
+        <div class="flex-container flex-shrink2">
+            <div class="flex-item item01">Width 150 = 16% de 783 </div>
+            <div class="flex-item item02">Width 150 = 16% de 783 </div>
+            <div class="flex-item item03">Width 150 = 16% de 783 </div>
+            <div class="flex-item item04">Width 333 = 42% de 783 </div>
+        </div>
+        <p>A propoção feita no flex é por porcentagem como visto acima. Se pegar cinco itens flex, o valor ocupado por eles no flex container é proporcional ao tamanho deles em relação a soma total. Outro exemplo:</p>
+        <div class="flex-container flex-shrink">
+            <div class="flex-item item01">Width 348 = 29% de 1200</div>
+            <div class="flex-item item01">Width 348 = 29% de 1200</div>
+            <div class="flex-item item02">Width 252 = 21% de 1200</div>
+            <div class="flex-item item02">Width 252 = 21% de 1200</div>
+        </div>
+        <div class="flex-container flex-shrink2">
+            <div class="flex-item item01">Width 150 = 16% de 783 </div>
+            <div class="flex-item item02">Width 150 = 16% de 783 </div>
+            <div class="flex-item item03">Width 150 = 16% de 783 </div>
+            <div class="flex-item item04">Width 333 = 42% de 783 </div>
+        </div>
+        <p>Peguei a mesma coluna de cima, só que no primeiro conteiner dupliquei os itens. Eles tem o mesmo tamanho, a porporção é a mesma, a distribuição é a mesma, mas o tamanho total deles não é mais 600 e sim 1200.</p>
+    </section>
+        
+    <section id="parte03">
+        <h3>Flex Shrink</h3>
+        <p>Flex Container Width: 600px<br> Flex Grow: 1 / Shrink: 1 / Sem Flex Basis</p>
+        <div class="flex-container flex-shrink">
+            <div class="flex-item item01">Basis 100px</div>
+            <div class="flex-item item02">Basis 100px</div>
+            <div class="flex-item item03">Basis 100px</div>
+            <div class="flex-item item04">Basis 100px</div>
+            <div class="flex-item item05">Basis 100px</div>
+            <div class="flex-item item06">Basis 100px</div>
+            <div class="flex-item item07">Basis 100px</div>
+        </div>
+        <p>Flex Container Width: 600px<br>Flex Grow: 1 / Shrink: 0 / Flex Basis: 100px</p>
+        <div class="flex-container flex-shrink2">
+            <div class="flex-item item01">Basis 100px</div>
+            <div class="flex-item item02">Basis 100px</div>
+            <div class="flex-item item03">Basis 100px</div>
+            <div class="flex-item item04">Basis 100px</div>
+            <div class="flex-item item05">Basis 100px</div>
+            <div class="flex-item item06">Basis 100px</div>
+            <div class="flex-item item07">Basis 100px</div>
+        </div>
+        <p>Flex Container Width: 600px<br> Flex Grow: 1 / Shrink: 2 / Flex Basis: 100px</p>
+        <div class="flex-container flex-shrink-active">
+            <div class="flex-item item01">Basis 100px</div>
+            <div class="flex-item item02">Basis 100px</div>
+            <div class="flex-item item03">Basis 100px</div>
+            <div class="flex-item item04">Basis 100px</div>
+            <div class="flex-item item05">Basis 100px</div>
+            <div class="flex-item item06">Basis 100px</div>
+            <div class="flex-item item07">Basis 100px</div>
+        </div>
+    </section>
 </body>
 </html>
