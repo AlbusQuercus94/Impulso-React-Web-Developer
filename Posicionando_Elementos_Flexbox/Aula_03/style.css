@@ -276,3 +276,82 @@ Os valores para a propriedade flex grow são apenas números.*/
     flex-shrink: 12;
 }
 
+/* ---------------------------------------------- */
+/* PARTE 5 - FLEX  */
+/*A propriedade Flex é uma abreviação das três anteriores. O valor do flex é dividido em 3 valores: grow, shrink e basis.*/
+/*Pondo em prática*/
+
+#parte04{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+
+#parte04 .flex-container{
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    width: 600px;
+    background: burlywood;
+}
+
+#parte04 .flex-item{
+    margin: -1px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+    flex-grow: 1;
+}
+/*Grow: 1; Shrink: 1; Basis: 0;*/
+/*A proporção de crescimento é 1, a proporção de encolhimento também é 1, o tamanho base do tamanho é 0px*/
+#parte04 .flex1 .flex-item{
+    flex: 1 1 0;
+}
+
+/*Grow: 1; Shrink: 1; Basis: auto;*/
+/*A proporção de crescimento é 1, a proporção de encolhimento também é 1, o tamanho base do tamanho é automática*/
+#parte04 .flex2 .flex-item{
+    flex: 1 1 auto;
+}
+
+
+/*Grow: 1; Shrink: 0; Basis: 0;*/
+/*A proporção de crescimento é 1, o item não encolherá, o tamanho base do tamanho é 0px
+Nesse exemplo, os itens tem quebra de linha nos espaços das palavras, alterando a altura para caber todo o conteúdo dentro do container.*/
+#parte04 .flex3 .flex-item{
+    flex: 1 0 0;
+}
+
+/*Grow: 1; Shrink: 0; Basis: auto;*/
+/*A proporção de crescimento é 1, o item não encolherá, o tamanho base do tamanho é auto.
+Por ter fator de crescimento e o basis auto, o item não tem quebra de linha, fazendo a largura ser o tamanho da linha do item, criando vazamento.*/
+#parte04 .flex4 .flex-item{
+    flex: 1 0 auto;
+}
+
+/*Grow: 0; Shrink: 1; Basis: 0;*/
+/*Não sendo repetivo, aqui não temos proporção de crescimento, mas tem de encolhimento, fazendo com que o item quebre de linha o máximo possivel, deixando a largura como a maior palavra do conteúdo. */
+#parte04 .flex5 .flex-item{
+    flex: 0 1 0;
+}
+
+/*Grow: 0; Shrink: 1; Basis: auto;
+Aqui o conteúdo vai tentar caber no container, uma vez que tem fator de redução. Então mesmo tendo como largura o auto, ele vai quebrar as linhas para se encaixar no container por conta do shrink.*/
+#parte04 .flex6 .flex-item{
+    flex: 0 1 auto;
+}
+
+/*Grow: 0; Shrink:01; Basis: 0;
+Aqui ele encolhe os item sem necessidade, mesmo tendo espaço, ele vai se reduzir ao menor tamanho possivel.*/
+#parte04 .flex7 .flex-item{
+    flex: 0 0 0;
+}
+
+/*Grow: 0; Shrink: 0; Basis: auto;
+Aqui */
+#parte04 .flex8 .flex-item{
+    flex: 0 0 auto;
+}
