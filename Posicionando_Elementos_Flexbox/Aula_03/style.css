@@ -277,7 +277,7 @@ Os valores para a propriedade flex grow são apenas números.*/
 }
 
 /* ---------------------------------------------- */
-/* PARTE 5 - FLEX  */
+/* PARTE 4 - FLEX  */
 /*A propriedade Flex é uma abreviação das três anteriores. O valor do flex é dividido em 3 valores: grow, shrink e basis.*/
 /*Pondo em prática*/
 
@@ -354,4 +354,95 @@ Aqui ele encolhe os item sem necessidade, mesmo tendo espaço, ele vai se reduzi
 Aqui */
 #parte04 .flex8 .flex-item{
     flex: 0 0 auto;
+}
+
+/* ----------------------------------------------- */
+/* PARTE 5 - ORDER */
+/*É uma propriedade que trata da ordenação dos itens flex. O valor padrão é o 0.*/
+/*É como uma etiqueta, que voce põe no item, determinando qual o número dele. A ordem dos números a serem apresentados é em ordem crescente.*/
+/*Caso tenha dois item com a mesma etiqueta, eles serão organizados em ordem de aparição.*/
+
+
+#parte05{
+    border: 5px solid black;
+    width: 700px;
+    padding: 5px;
+    margin: 20px 0px;
+}
+
+
+#parte05 .flex-container{
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    width: 600px;
+    background: burlywood;
+}
+
+#parte05 .flex-item{
+    margin: -1px;
+    padding: 0px;
+    border: 3px solid cadetblue;
+    color: rgb(4, 112, 112);
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+#parte05 .order-row-1 .item01,
+#parte05 .order-row-1 .item02{
+    order: 3;
+}
+
+#parte05 .order-row-1 .item03{
+    order: 1;
+}
+
+#parte05 .order-row-1 .item04{
+    order: -2;
+}
+
+
+#parte05 .order-column-0,
+#parte05 .order-column-1{
+    flex-direction: column;
+}
+
+#parte05 .order-column-1 .item01, 
+#parte05 .order-column-1 .item02{
+    order: 3;
+}
+
+#parte05 .order-column-1 .item03{
+    order: 1;
+}
+
+#parte05 .order-column-1 .item04{
+    order: 2;
+}
+
+/*Dependendo do flex-direction, a ordem pode ser revertida, caso o direction seja do tipo reverse.*/
+
+#parte05 .order-row-reverse-1{
+    flex-direction: row-reverse;
+}
+
+#parte05 .order-column-reverse-1{
+    flex-direction: column-reverse;
+}
+
+#parte05 .order-row-reverse-1 .item01,
+#parte05 .order-row-reverse-1 .item02,
+#parte05 .order-column-reverse-1 .item01, 
+#parte05 .order-column-reverse-1 .item02{
+    order: 3;
+}
+
+#parte05 .order-row-reverse-1 .item03,
+#parte05 .order-column-reverse-1 .item03{
+    order: 1;
+}
+
+#parte05 .order-row-reverse-1 .item04,
+#parte05 .order-column-reverse-1 .item04{
+    order: -2;
 }
