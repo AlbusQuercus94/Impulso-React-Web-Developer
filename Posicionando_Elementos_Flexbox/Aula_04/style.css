@@ -270,3 +270,46 @@ footer .icons p{
     color: #fca311;
     margin: 5px 10px;
 }
+
+/*------------------------------------------*/
+/*Mobile*/
+
+@media(max-width: 800px){
+    .main{
+        flex-direction: column;
+    }
+
+    .turismo{
+        flex-direction: column;
+    }
+
+    .turismo .text{
+        text-align: center;
+    }
+
+    .quem-somos{
+        flex-direction: column;
+    }
+
+    .quem-somos .text h2{
+        margin-bottom: auto;
+    }
+
+    .servicos .lista-servicos{
+        flex-direction: column;
+    }
+
+    .planos .lista-planos{
+        flex-direction: column;
+    }
+
+    .planos .lista-planos .plano{
+        align-self: center;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}
