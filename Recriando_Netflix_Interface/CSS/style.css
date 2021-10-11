@@ -1,0 +1,40 @@
+:root{
+    --preto: #141414;
+    --vermelho: #e50914;
+    --texto: #aaa;
+    --textosobre: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--preto);
+}
+
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2%;
+}
+
+#logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+header .container nav a{
+    text-decoration: none;
+    color: var(--texto);
+    margin-right: 10px;
+}
+
+header .container nav a:hover{
+    color: var(--textosobre);
+}
