@@ -66,9 +66,9 @@
     }
 }
 
-@media (max-height: 500px){
+@media (max-height: 600px){
     main #lancamento .descricao{
-        height: 50%;
+        height: 60vh;
         background-position: top;
     }
 
@@ -81,4 +81,10 @@
         margin: 0;
     }
 
+}
+
+@media (max-height: 500px){
+    main #lancamento .descricao{
+        height: 40vh;
+    }
 }
