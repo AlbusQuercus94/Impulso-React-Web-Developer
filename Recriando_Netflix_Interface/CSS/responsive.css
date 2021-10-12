@@ -1,0 +1,84 @@
+:root{
+    --preto: #141414;
+    --texto: #aaa;
+    --textosobre: #fff;
+    --vermelho: #e50914;
+}
+
+@media (max-width: 450px) {
+    
+    main #lancamento .descricao{
+        background-position: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #inicio{
+        flex-direction: column;
+    }
+
+    #lancamento .descricao{
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin: 0;
+        
+    }
+    #lancamento .descricao p{
+        text-align: justify;
+        width: 90%;
+    }
+    #lancamento .descricao .botoes{
+        justify-content: flex-end;
+        width: 90%;
+    
+    }
+
+    #lancamento .descricao .titulo,
+    #lancamento .descricao h3,
+    #lancamento .descricao p,
+    #lancamento .descricao .botoes{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+}
+
+@media (min-width: 715px) {
+    #lancamento .descricao .botoes .btn1::after{
+        content: "Assistir Agora";
+        color: var(--texto);
+        
+    }
+    main #lancamento .descricao{
+        background:
+        linear-gradient(to right,rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.01) 100%), 
+        url('../Images/Infiltrado_Cartaz-1.jpg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 715px;
+    }
+
+    #lancamento .descricao .botoes .btn2::after{
+        content: "Saiba Mais";
+        color: var(--texto);
+    }
+}
+
+@media (max-height: 500px){
+    main #lancamento .descricao{
+        height: 50%;
+        background-position: top;
+    }
+
+    main #lancamento .descricao p,
+    main #lancamento .descricao h3{
+        display: block;
+        z-index: -1;
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+}

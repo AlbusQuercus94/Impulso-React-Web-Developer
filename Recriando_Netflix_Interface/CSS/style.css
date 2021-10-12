@@ -84,7 +84,6 @@ main #lancamento .descricao{
 }
 
 #lancamento .descricao .botoes{
-    /* background-color: aqua; */
     padding: 1%;
     display: flex;
     width: 50%;
@@ -119,7 +118,9 @@ main #lancamento .descricao{
 /* Section 2 - Catálogos */
 
 .catalogo .owl-theme .item{
-    z-index: 0;
+    
+    height: 100%;
+    width: 100%;
     padding: 10px;
 }
 
@@ -131,8 +132,6 @@ main #lancamento .descricao{
 
 
 .catalogo .owl-theme .item .opcao{
-    height: 100%;
-    width: 100%;
     display: block;
     border-radius: 10px;
     border: var(--textosobre) solid 1px;
