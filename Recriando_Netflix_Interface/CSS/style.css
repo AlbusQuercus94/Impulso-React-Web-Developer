@@ -1,9 +1,10 @@
 :root{
     --preto: #141414;
-    --vermelho: #e50914;
     --texto: #aaa;
     --textosobre: #fff;
+    --vermelho: #e50914;
 }
+/*TRABALHANDO COM 770PX DE LARGURA*/
 
 *{
     box-sizing: border-box;
@@ -13,28 +14,132 @@
 
 body {
     background: var(--preto);
+    color: var(--textosobre);
 }
 
+/* ------------------------------------------------------- */
+/*HEADER - BARRA DE NAVEGAÇÃO*/
 
 header .container{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     margin-left: 2%;
+    padding: 1%;
 }
 
-#logo{
+header .container #logo{
     color: var(--vermelho);
-    font-family: 'Arial Black', 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
 }
 
 header .container nav a{
-    text-decoration: none;
     color: var(--texto);
     margin-right: 10px;
+    text-decoration: none;
 }
 
 header .container nav a:hover{
     color: var(--textosobre);
+}
+
+/* ------------------------------------------------------- */
+/*MAIN - LAÇAMENTO*/
+
+main #lancamento .descricao{
+    background:
+        linear-gradient(to right,rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.01) 100%), 
+        url('../Images/Infiltrado_Cartaz-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 400px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: var(--textosobre) solid 1px;
+    border-radius: 15px;
+    margin: 0.5%;
+}
+
+#lancamento .descricao p{
+    text-align: justify;
+    width: 50%;
+}
+
+#lancamento .descricao .titulo,
+#lancamento .descricao h3,
+#lancamento .descricao p,
+#lancamento .descricao .botoes{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.titulo{
+    font-size: 36px;
+}
+
+#lancamento .descricao .botoes{
+    /* background-color: aqua; */
+    padding: 1%;
+    display: flex;
+    width: 50%;
+}
+
+#lancamento .descricao .botoes button{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 50%;
+    margin: 1%;
+    color: var(--texto);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: var(--texto) solid 1px;
+    border-radius: 25px;
+    transition: 0.3s all;
+    padding: 1%;
+    cursor: pointer;
+}
+
+#lancamento .descricao .botoes button:hover{
+    color: var(--preto);
+    transform: scale(1.05);
+    border: var(--preto) solid 1px;
+    background-color: var(--textosobre);
+}
+
+#lancamento .descricao .botoes button i{
+    padding: 2.5%;
+}
+
+/* ----------------------------------------------------------- */
+/* Section 2 - Catálogos */
+
+.catalogo .owl-theme .item{
+    z-index: 0;
+    padding: 10px;
+}
+
+.catalogo h2{
+    margin-left: 2%;
+    margin-top: 1%;
+    font-size: 30px;
+}
+
+
+.catalogo .owl-theme .item .opcao{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: var(--textosobre) solid 1px;
+    z-index: 5;
+    transition: 0.3s all;
+}
+
+.catalogo .owl-theme .item .opcao:hover{
+    transform: scale(1.05);
 }
