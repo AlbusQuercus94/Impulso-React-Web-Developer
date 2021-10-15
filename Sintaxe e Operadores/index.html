@@ -7,14 +7,33 @@
     <title>Sintaxe e Operadores</title>
 </head>
 <body>
-    <h1>Os principais operadores de JavaScript.</h1>
-    <ul>
-        <li>Operadores de Aritimética</li>
-        <li>Operadores de Atribuição</li>
-        <li>Operadores de Comparação</li>
-        <li>Operadores de Lógica</li>
-        <li>Operadores de Condicionais</li>
-    </ul>
+    <section id="parte1">
+        <h1>Os principais operadores de JavaScript.</h1>
+        <ul>
+            <li>Operadores de Aritimética</li>
+            <li>Operadores de Atribuição</li>
+            <li>Operadores de Comparação</li>
+            <li>Operadores de Lógica</li>
+            <li>Operadores de Condicionais</li>
+        </ul>
+    </section>
+    <section id="parte2">
+        <h1>Atividade</h1>
+        <p>A atividade é digitar dois números e dizer se são iguais ou diferentes e se são menores que 10, maior que 20 ou estão entre 10 e 20.</p>
+        <div class="container">
+            <div class="container numbers">
+                <label for="numA">Digite um número:</label>
+                <input type="number" name="numA" value="0" id="numA">
+            </div>
+            <div class="container">
+                <label for="numB">Digite um número:</label>
+                <input type="number" name="numB" value="0" id="numB">
+            </div>
+            <input type="submit" value="Analisar" onclick="analyze()" >
+        </div>
+        <div class="container" id="answer">
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
