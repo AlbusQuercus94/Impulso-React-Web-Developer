@@ -185,13 +185,75 @@ console.log(teste)
 // PARTE 6 - OBJETOS
 //Uma estrutura tipo chave valor, é uma lista se elementos chaves que possui um valor. 
 
-let obj1 = {
+const obj1 = {
     chave1: 'valor1',
     chave2: 'valor2'
 }
 
-obj1.name = 'Liz'
+console.log(obj1)
+/*Constantes podem ser alteradas por REFERENCIA*/
+
+obj1.name = 'Liz' //Adicionando uma chave name com o valor Liz
 
 console.log(obj1)
+console.log(obj1.chave1)
 
-Object.values()
+console.log(Object.values(obj1)) // Retorna um array com os valores do objeto
+console.log(Object.keys(obj1)) // Retorna um array com as chaves do objeto
+
+/*Forma de criar um array a partir de um objeto.*/
+//Início
+let chaves = Object.keys(obj1);
+let valores = Object.values(obj1);
+let arr2 = [];
+for (let i = 0; i < chaves.length; i++){
+    arr2.push([chaves[i],valores[i]]);
+}
+
+console.log(arr2)
+//Fim
+
+let nome = obj1.name; // Dado stack
+obj1.name = 'Pedro'; // Mudança da Referencia
+console.log(nome, obj1.name)
+
+let algumachave = "chave3"; //Criando uma chave no objeto a partir de uma variável
+obj1[algumachave] = "valor3";
+console.log(obj1)
+
+// -----------------------------------------------
+// PARTE 7 - EMPTY, NULL E UNDEFINED
+// Empty é uma declaração com uma atribuição vazia. É também relacionada ao zero. 
+//PS: 0 (zero) é também usado para simbolizar o falso em boolean
+
+let a7 = 0 == false;
+let a7_1 = 0 === false;
+let b7 = 1 == true;
+let b7_1 = 1 === true;
+console.log(`Diferença de igualdade e estritamente iguais
+    0 ==  false? ${a7} (valores iguais)
+    0 === false? ${a7_1} (tipos diferentes)
+    1 ==   true? ${b7} (valores iguais)
+    1 ===  true? ${b7_1} (tipos diferentes)`
+)
+
+//Null é um objeto. Como o próprio nome diz, ele é nulo. Não é uma atribuição sem atribuição como o empty, ele é um valor nulo.
+// Apesar de não ser considerado um valor false, sua negação é um valor true
+
+let a7_2 = null;
+console.log(a7_2)
+let b7_2 = !a7_2 == true;
+console.log(`Diferença de null
+  null ==  false? ${null ==  false}
+  null === false? ${null === false}
+  null ==   true? ${null ==   true}
+  null ===  true? ${null ===   true}
+ !null ==   true? ${!null ==   true}
+ !null ===  true? ${!null ===   true}
+!!null ==  false? ${!!null ==   false}
+!!null === false? ${!!null ===   false}`)
+
+// Undefined é um objeto. Como o próprio nome diz, ele é indefinido. Ocorre quando você não atribui um valor à uma variável.
+
+let a7_3;
+console.log(a7_3)
