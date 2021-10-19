@@ -257,3 +257,81 @@ console.log(`Diferença de null
 
 let a7_3;
 console.log(a7_3)
+
+// -----------------------------------------------------------------
+// ATIVIDADE 1 - PALINDROMO
+
+let palindromo = 'AEIOU';
+
+function verificarPalindromo (word){
+    //Para permitir que números possam ser verificados
+    let palavra = word.toString()
+
+    //Impedir a verificação de objetos como null, undefined
+    if(!word) return console.log('Escreva uma palavra válida');
+
+    //Verificação pra frases.
+    if(palavra.includes(' ')){
+        var array1 = palavra.split("")
+        array1 = array1.filter(e => e != " ");
+    }else{
+        var array1 = palavra.split("");
+    }
+
+    let array2 = [...array1]; //array de word
+    array1.reverse() //array de word reverso
+    var count = 0; //contador de erros
+
+    //Validação
+    for(i = 0 ; i < array1.length; i++){
+        if(array1[i] !== array2[i]){
+            return console.log('Não é um palindromo')
+        }
+    }
+    
+    return console.log('É um palindromo')
+}
+
+
+function verificarPalindromo2(word) {
+    //Para permitir que números possam ser verificados
+    let palavra = word.split('').filter(e => e != " ").join('').toString()
+
+    //Impedir a verificação de objetos como null, undefined
+    if(!word) return console.log('Escreva uma palavra válida');
+
+    if(palavra == palavra.split('').reverse().join('')){
+        return console.log('É um palindromo')
+    }
+
+    return console.log('Não é um palindromo')
+}
+
+verificarPalindromo(palindromo)
+verificarPalindromo2(palindromo)
+
+
+
+// ATIVIDADE 2 - SUBSTITUINDO OS PARES
+
+let array3 = [1, 3, 4, 6, 8, 33, 23, 90];
+
+function evenReplace(arrayN){
+    if(!arrayN) return console.log ('Digite um array válido.');
+    if(arrayN.length == 0) return console.log(-1);
+    let array5 = [];
+    for(i = 0; i < arrayN.length; i++){
+        if(arrayN[i]%2==0){
+            array5.push(0);
+        }
+        else{
+            array5.push(arrayN[i]);
+        }
+
+    }
+    return console.log(array5)
+}
+
+let array31=[];
+evenReplace(array3)
+evenReplace(array31)
