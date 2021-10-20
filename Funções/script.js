@@ -74,3 +74,13 @@ let obj2 = {
 
 var {chave1, chave2, chave3} = obj2; // O nome da váriavel a ser atribuida, deve ser o mesmo nome da chave
 console.log(chave1, chave2, chave3) // Inves de e usar obj3.chave1, o desestructurin permite que o faça normalmente
+
+// ----------------------------------------------------------------------
+//AULA 3 - FOR, WHILE E IF
+//Laços de Repetição
+//for
+//for...in: iteração para objetos
+//for...of: iteração para arrays
+//if/else if/else
+//while...do: enquanto uma condição for verdadeira executa um código até a condição se tornar falsa
+//do...while: executa um codigo enquanto uma função for verdadeira
