@@ -276,4 +276,5 @@ let pessoas = {
 
 for (x in pessoas){
     console.log(calculaIdade.call(pessoas[x], 5))
+    console.log(calculaIdade.apply(pessoas[x], [5]))
 }
