@@ -164,3 +164,46 @@ let obj3 = {
 }
 
 console.log(obj3.completo())
+
+console.log(this) // Retorna window, que é o objeto global da página
+
+var result2 = (function () {
+    console.log(this);
+})();
+
+
+// Método Call
+
+function getAlgo(){
+    console.log(this.nome)
+}
+
+getAlgo.call(obj3);
+
+const obj4 = {
+    num1: 2,
+    num2: 4,
+}
+
+function soma2(a, b){
+    console.log(this.num1 + this.num2 + a + b)
+}
+soma2.call(obj4, 1, 2)
+
+
+// Método Apply
+
+
+getAlgo.apply(obj3);
+soma2.apply(obj4, [1, 2]) //Os argumentos da função tem que estar entre colchetes, como um array.
+
+// Método Bind
+// Clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parâmetro
+
+const regressaNome = function () {
+    return this.nome
+};
+
+let peu = regressaNome.bind({nome:'Pedu'});
+
+console.log(peu())
