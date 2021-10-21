@@ -207,3 +207,26 @@ const regressaNome = function () {
 let peu = regressaNome.bind({nome:'Pedu'});
 
 console.log(peu())
+
+// ------------------------------------------------
+// AULA 5 - ARROW FUNCTION
+//É uma função reduzida
+
+let olaMundo = function(){
+    return 'Olá Mundo Normal'
+}
+
+console.log(olaMundo());
+
+let olaMundo2 = /*Omite o Function */ (/*Parametros aqui */) =>{return 'Olá Mundo Arrow'} 
+
+console.log(olaMundo2());
+
+let olaMundo3 = /*Omite o Function */ (/*Parametros aqui */) => 'Olá Mundo Arrow Reduzido' 
+
+console.log(olaMundo3());
+
+//Arrow function não faz Hoisting
+//Arrow function não pode ter o this. This será sempre o objeto global em uma arrow function.
+//Métodos que alteram o valor não funcionam com arrow function: call, apply, bind.
+//Constructor não pode ser usado em arrow function.
