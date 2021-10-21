@@ -230,3 +230,50 @@ console.log(olaMundo3());
 //Arrow function não pode ter o this. This será sempre o objeto global em uma arrow function.
 //Métodos que alteram o valor não funcionam com arrow function: call, apply, bind.
 //Constructor não pode ser usado em arrow function.
+
+// ------------------ATIVIDADE----------------
+
+// Atividade 1 - Alunos Aprovados
+// Crie uma função que recebe o array alunos e um número que irá representar a média final;
+// Percorra o array e popule um novo array auxiliar apenas com os alunos cujas notas são maiores ou iguais à média final;
+// Utilize a técnica "object destructuring" para manipular as propriedades desejadas de cada aluno.
+
+let alunoNota = [['aluno01', 5],['aluno02', 8],['aluno03', 7],['aluno04', 6],['aluno05', 9],['aluno06', 4],['aluno07', 8],['aluno08', 6],['aluno09', 1],['aluno10', 8],['aluno11', 7]]
+
+function alunosAprovados (array, media){
+    if(!array) return console.log('Ponha um valor válido');
+    let alunos = []
+    for(x of array){
+        const [aluno, nota] = x;
+        if(nota >= media){
+            alunos.push(aluno)
+        }
+    }
+    return console.log(alunos)
+}
+
+alunosAprovados(alunoNota,8)
+
+// Atividade 2 - This
+// Dada a função calculaIdade, utilize os métodos call e apply para modificar o valor de this. Crie seus próprios objetos para esta atividade!
+
+function calculaIdade(anos) {
+	return `Daqui a ${anos} anos, ${this.nome} terá ${
+		this.idade + anos
+	} anos de idade.`;
+}
+
+let pessoas = {
+    pessoa1:{
+        nome: 'Pedro',
+        idade: 27
+    },
+    pessoa2:{
+        nome: 'Liz',
+        idade: 30
+    }
+}
+
+for (x in pessoas){
+    console.log(calculaIdade.call(pessoas[x], 5))
+}
