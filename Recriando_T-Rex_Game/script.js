@@ -47,7 +47,7 @@ function spacePress(event){
 
 function obstacle(){
     const cactus = document.createElement('div');
-    let cactusPosition = 90
+    let cactusPosition = 100
     let newCactus = Math.random()*5000;
 
     cactus.classList.add('cactus');
