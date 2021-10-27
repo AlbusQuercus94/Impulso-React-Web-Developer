@@ -40,17 +40,37 @@ function fall(position){
 function spacePress(event){
     if(event.keyCode === 32){ //Tecla pressionada é o ESPAÇO
         dinojump()
+        
     }
-    obstacle()
+    
 }
 
 function obstacle(){
     const cactus = document.createElement('div');
-    let cactusPosition = 100
+    let cactusPosition = 90
+    let newCactus = Math.random()*5000;
 
     cactus.classList.add('cactus');
-    cactus.style.left = 50 + 'vw';
+    cactus.style.left = cactusPosition + '%';
     background.appendChild(cactus)
+
+    let leftMove = setInterval(() => {
+        if(cactusPosition<0){
+            clearInterval(leftMove);
+            background.removeChild(cactus)
+        }
+        else{
+            cactusPosition -= 1;
+            cactus.style.left = cactusPosition + "%";
+        }
+    },20)
+
+    setTimeout(obstacle, newCactus)
 }
 
+function obstacleMove(cactusPosition){
+    
+}
+
+obstacle();
 document.addEventListener('keypress',spacePress)
