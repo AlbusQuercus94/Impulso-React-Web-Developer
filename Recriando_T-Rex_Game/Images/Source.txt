@@ -1,0 +1,3 @@
+background.png = "https://github.com/celso-henrique/dio-dino-game/blob/master/background.png?raw=true"
+cactus.png = "https://github.com/celso-henrique/dio-dino-game/blob/master/cactus.png?raw=true"
+dino.png = "https://github.com/celso-henrique/dio-dino-game/blob/master/dino.png?raw=true"
