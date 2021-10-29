@@ -1,5 +1,6 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background')
+let position = 10;
 let isJumping = false
 
 function dinojump(){
@@ -10,29 +11,28 @@ function dinojump(){
 }
 
 function jump(){
-    let position = 50;
     isJumping = true;
     let upInterval = setInterval( () =>{
-        if(position>70){
+        if(position>150){
             clearInterval(upInterval);
-            fall(position);
+            fall();
         }
         else{
-            position+=2
-            dino.style.bottom = position + 'vh';
+            position+=20
+            dino.style.bottom = position + 'px';
         }
     },20)
 }
 
-function fall(position){
+function fall(){
     let downInterval = setInterval( () => {
-        if(position<=50){
+        if(position<=10){
             isJumping = false
             clearInterval(downInterval)
         }
         else{
-            position -= 2;
-            dino.style.bottom = position + 'vh';
+            position -= 20;
+            dino.style.bottom = position + 'px';
         }
     },20)
 }
@@ -47,11 +47,11 @@ function spacePress(event){
 
 function obstacle(){
     const cactus = document.createElement('div');
-    let cactusPosition = 100
-    let newCactus = Math.random()*5000; //New obstacle time
+    let cactusPosition = 1920
+    let newCactus = Math.random()*5000+1000; //New obstacle time
 
     cactus.classList.add('cactus');
-    cactus.style.left = cactusPosition + '%';
+    cactus.style.left = cactusPosition + 'px';
     background.appendChild(cactus)
 
     //Obstacle move
@@ -60,9 +60,14 @@ function obstacle(){
             clearInterval(leftMove);
             background.removeChild(cactus)
         }
+        else if(cactusPosition > 10 && cactusPosition < 70 && position < 70){
+            clearInterval(leftMove)
+            console.log('game over')
+            document.body.innerHTML = '<h1> END GAME </h1>'
+        }
         else{
-            cactusPosition -= 1;
-            cactus.style.left = cactusPosition + "%";
+            cactusPosition -= 10;
+            cactus.style.left = cactusPosition + "px";
         }
     },20)
     //New Obstacle
