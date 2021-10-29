@@ -63,7 +63,7 @@ function obstacle(){
         else if(cactusPosition > 10 && cactusPosition < 70 && position < 70){
             clearInterval(leftMove)
             console.log('game over')
-            document.body.innerHTML = '<h1> END GAME </h1>'
+            document.body.innerHTML = '<h1> END GAME </h1> <p> Press F5 to restart</p>'
         }
         else{
             cactusPosition -= 10;
