@@ -10,29 +10,29 @@ function dinojump(){
 }
 
 function jump(){
-    let position = 0;
+    let position = 50;
     isJumping = true;
     let upInterval = setInterval( () =>{
-        if(position>150){
+        if(position>70){
             clearInterval(upInterval);
             fall(position);
         }
         else{
-            position+=20
-            dino.style.bottom = position + 'px';
+            position+=2
+            dino.style.bottom = position + 'vh';
         }
     },20)
 }
 
 function fall(position){
     let downInterval = setInterval( () => {
-        if(position<=0){
+        if(position<=50){
             isJumping = false
             clearInterval(downInterval)
         }
         else{
-            position -= 20;
-            dino.style.bottom = position + 'px';
+            position -= 2;
+            dino.style.bottom = position + 'vh';
         }
     },20)
 }
@@ -48,12 +48,13 @@ function spacePress(event){
 function obstacle(){
     const cactus = document.createElement('div');
     let cactusPosition = 100
-    let newCactus = Math.random()*5000;
+    let newCactus = Math.random()*5000; //New obstacle time
 
     cactus.classList.add('cactus');
     cactus.style.left = cactusPosition + '%';
     background.appendChild(cactus)
 
+    //Obstacle move
     let leftMove = setInterval(() => {
         if(cactusPosition<0){
             clearInterval(leftMove);
@@ -64,7 +65,7 @@ function obstacle(){
             cactus.style.left = cactusPosition + "%";
         }
     },20)
-
+    //New Obstacle
     setTimeout(obstacle, newCactus)
 }
 

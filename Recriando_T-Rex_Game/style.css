@@ -1,10 +1,20 @@
+html{
+    overflow: hidden;
+}
+
+.background{
+    height: 50vh;
+    width: 95vw;
+    background-color: burlywood;
+}
 
 .dino{
     width: 60px;
     height: 60px;
     background: green;
     position: absolute;
-    bottom: 1%;
+    bottom: 50vh;
+    left: 2vw;
 }
 
 .cactus {
@@ -12,5 +22,5 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    bottom: 1%;
+    bottom: 50vh;
 }
