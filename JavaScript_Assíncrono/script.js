@@ -60,7 +60,7 @@ await resolvePromise()
 
 //Repetindo a função anterior mas com try... catch
 
-async function resolvePromise(){
+async function resolvePromise2(){
     const myPromise = new Promise((resolve, reject) => {
         window.setTimeout(() => {
             resolve('Funcionou!!!')
