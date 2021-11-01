@@ -28,12 +28,12 @@ const myPromise = new Promise((resolve, reject) => {
         resolve(console.log('Funcionou!!!'))
     }, 2000)
 });
-
+/*
 await myPromise
     .then((result) => result + ' passando pelo then')
     .then((result) => result + ' e acabou!')
     .catch((err) => console.log(err.message));
-
+*/
 console.log(myPromise)
 
 //Async: é uma palavra reservada no javascript para determinar a assincronicidade de uma função. Com o uso dela que a palavra reservada await funciona. 
@@ -56,7 +56,7 @@ async function resolvePromise(){
     return console.log(resolved)
 }
 
-await resolvePromise()
+resolvePromise()
 
 //Repetindo a função anterior mas com try... catch
 
@@ -118,7 +118,7 @@ async function resolvePromise2(){
 //  .then(json => console.log(json)) 
 
 //Com o fetch dar-se para fazer operações no banco de dados(POST, GET, PUT, DELETE). Exemplo
-
+/*
 await fetch('https://algumsite.com',{
     method: "GET",
     cache: 'no-cache'
@@ -133,3 +133,29 @@ await fetch('https://algumsite.com',{
 })
     .then(response => response.json())
     .then(json => console.log(json))
+    
+*/
+
+//ATIVIDADE
+const Base_URL = "https://thatcopy.pw/catapi/rest/"
+
+const getCats = async () => {
+    try{
+        const data = await fetch(Base_URL);
+        const json = await data.json()
+        return json.webpurl
+    }catch (e){
+        console.log(e.message)
+    }
+}
+
+
+let catImage = document.querySelector('#cat');
+const buttonChange = document.querySelector('#changeCat')
+
+const loadImg = async() => {
+    catImage.src = await getCats()
+}
+
+loadImg()
+
