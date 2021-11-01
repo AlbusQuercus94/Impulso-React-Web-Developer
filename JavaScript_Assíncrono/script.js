@@ -82,3 +82,54 @@ async function resolvePromise2(){
     
     return console.log(result)
 }
+
+// -------------------------------------------------------
+// AULA2 - APIs E FETCH 
+
+//API: significa Application Programming Interface é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end. Você consegue acessá-la por meio de URLs.]
+
+//JSON: JavaScript Object Notation, é muito comum APIs retornem seus dados no formato ".json", esses arquivos precisam ser tratados quando os recebemos.
+//Exemplo de JSON
+
+/*
+{
+    "description": "schema POST bank",
+    "type": "object", 
+    "properties": {
+        "id": {
+            "type": "number",
+            "minimum": 0
+        },
+        "code":{
+            "type": "string"
+        }
+        "name": {
+            "type": "string"
+        }
+    }
+}
+*/
+
+// FETCH
+
+//Sintaxe do fetch
+//fetch(url, options) //Retorna uma Promise
+//  .then(response => response.json())
+//  .then(json => console.log(json)) 
+
+//Com o fetch dar-se para fazer operações no banco de dados(POST, GET, PUT, DELETE). Exemplo
+
+await fetch('https://algumsite.com',{
+    method: "GET",
+    cache: 'no-cache'
+})
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+await fetch('https://algumsite.com',{
+    method: "GET",
+    cache: 'no-cache',
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(json => console.log(json))
