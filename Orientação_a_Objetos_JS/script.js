@@ -92,3 +92,79 @@ siames._specie = 'Persa'
 
 console.log(animal)
 console.log(siames)
+
+
+//ATIVIDADE
+
+/*1*/class ContaBancaria {
+    /*1*/constructor(agencia, numero, tipo){
+        this.agencia = agencia;
+        this.numero = numero;
+        this._saldo = 0;
+        this.tipo = tipo;
+    }
+
+    /*2*/get saldo(){
+        return this._saldo
+    }
+
+    /*2*/set saldo(valor){
+        this._saldo = valor;
+    }
+
+    /*3*/sacar (valor){
+        if(valor>this._saldo){
+            console.log(`Saldo Insuficiente`)
+        }
+        this._saldo -= valor
+    }
+
+    /*3*/deposito (valor){
+        this._saldo += valor
+    }
+}
+
+/*4*/class ContaCorrente extends ContaBancaria{
+    constructor(agencia, numero, cartaoDeCredito){
+        super(agencia, numero);
+        /*6*/this.tipo = 'Conta Corrente';
+        /*4*/this._cartaoDeCredito = cartaoDeCredito;
+    }
+
+    /*5*/get cartaoDeCredito(){
+        return this._cartaoDeCredito
+    }
+
+    /*5*/set cartaoDeCredito(value){
+        this._cartaoDeCredito = value
+    }
+}
+
+/*7*/class ContaPoupanca extends ContaBancaria{
+    constructor(agencia, numero){
+        /*7*/super(agencia, numero);
+        this.tipo = 'Conta Poupança';
+    }
+}
+
+/*8*/class ContaUniversitaria extends ContaBancaria{
+    constructor(agencia, numero){
+        /*8*/ super(agencia, numero);
+        this.tipo = 'Conta Universitária';
+    }
+    
+    /*9*/sacar(valor){
+        if(valor>500){
+            console.log(`Só pode sacar valores menores que 500 reais.`)
+        }else if(valor>this._saldo){
+            console.log(`Saldo Insuficiente`)
+        }else{
+        this._saldo -= valor
+        }
+    }
+}
+
+let account = new ContaUniversitaria ('Caixa', 1, 0)
+account.deposito(50)
+account.sacar(25)
+console.log(account)
