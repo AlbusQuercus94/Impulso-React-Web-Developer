@@ -33,3 +33,19 @@ Utilizado no mural de notícias da ferramenta.
 //Não é obrigatório a utilização do JSX
 //JSX é uma sintax sugar para React.createElement
 //O browser não interpreta o JSX, para isso é necessário um transpilador para que a palicaçõ possa entender o código. O mais utilizado é o babel.
+
+// -------------------------------------------------------------------
+//Parte 03 - RENDERIZAÇÂO
+
+//React 'pensa' em como a interface deve estar a cada momento ao invés de alterá-la com o tempo, o que faz ter ganho de performance e evita uma série de erros.
+
+//Componentes e Props
+/*
+    Função e Classe;
+    Props;
+    Composição de Componentes;
+    Extração de Componentes
+*/
+
+//Boa pratica na criação de um novo arquivo componente é usar o CamelCase para o nome
+//Outra boa pratica dos componentes é eles serem mais abstrado possível, sem estado, sem manipulação de dados,
