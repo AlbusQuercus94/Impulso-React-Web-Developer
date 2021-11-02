@@ -91,3 +91,31 @@ let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 const filter2 = array4.filter((item) => item % 2 == 0)
 const filter3 = array4.filter((item) => item % 2 !== 0)
 console.log('No array', array4, '\nos números pares são:\n', filter2, '\ne os ímpares são:\n', filter3)
+
+
+// --------------------------------------------------\\
+// ATIVIDADE 3 - REDUCE
+/*
+a)Some todos os números de um array;
+b)Crie uma função que recebe uma lista de preços e um número representando o saldo disponível. Calcule qual será o saldo final após subtrair todos os preços da lista enviada. */
+
+let array5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+const reduce2 = array5.reduce((x,y) => y += x)
+console.log(reduce2)
+
+let preços = [12.50, 23.80, 12.60, 5.90]
+
+function soma (x,y){
+    return x+=y
+}
+
+function saldoFinal (lista, saldo){
+    total = lista.reduce(soma)
+    if(saldo<total){
+        return `Faltará R$ ${-(saldo-total).toFixed(2)} para a compra ser realizada.`
+    }
+    return `O saldo restante após a compra será de R$ ${(saldo - total).toFixed(2)}.`
+}
+
+console.log(saldoFinal(preços,50))
