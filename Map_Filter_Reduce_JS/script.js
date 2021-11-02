@@ -34,3 +34,12 @@ console.log(foreach1)
 const filter1 = array1.filter((item) => item % 2 == 0)
 
 console.log(filter1)
+
+//-----------------------------------------------\\
+// AULA 03 - REDUCE 
+
+// REDUCE: é um método que, diferente dos anteriores, não retorna um array com os elementos após uma função. Ele executa uma função em todos os elementos e retorna um único valor.
+
+const reduce1 = array1.reduce((x,y) => x += y)
+
+console.log(reduce1)
