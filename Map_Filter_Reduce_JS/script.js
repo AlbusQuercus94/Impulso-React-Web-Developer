@@ -43,3 +43,42 @@ console.log(filter1)
 const reduce1 = array1.reduce((x,y) => x += y)
 
 console.log(reduce1)
+
+//-------------------------------------------------------------\\
+// ATIVIDADE 01 - MAP
+/*Pratique a sintaxe de multiplicação de números, uma vez utilizando o parâmetro this de um objeto criado por você, e depois sem ele.*/
+
+let array3 = [1, 2, 3, 4, 5];
+const numeros = {
+    five: {
+        name: 'Cinco',
+        value: 5
+    },
+    six:{
+        name:'Seis',
+        value: 6
+    }
+};
+
+function tabuadaSemThis(array, numero){
+    let map3 = array.map((item) => item * numero)
+    return `Tabuada de ${numero}: ${map3}`
+}
+
+function tabuadaComThis (array, objeto){
+    return array.map(function (item){
+        return item * this.value
+    },objeto)
+}
+
+
+console.log("Tabuada de Cinco",tabuadaComThis(array3, numeros.five))
+console.log("Tabuada de Seis",tabuadaComThis(array3, numeros.six))
+
+for(x in numeros){
+    // console.log(numeros[x])//única forma de acessar uma propriedade dentro de um objeto em um for in
+    console.log(`Tabuada de ${numeros[x].name}`,tabuadaComThis(array3, numeros[x]))
+}
+
+console.log(tabuadaSemThis(array3, 4))
+
