@@ -106,16 +106,18 @@ console.log(reduce2)
 
 let preços = [12.50, 23.80, 12.60, 5.90]
 
-function soma (x,y){
-    return x+=y
+function calculo (x,y){
+    return x-=y
 }
 
 function saldoFinal (lista, saldo){
-    total = lista.reduce(soma)
-    if(saldo<total){
-        return `Faltará R$ ${-(saldo-total).toFixed(2)} para a compra ser realizada.`
+    total = lista.reduce(calculo,saldo)
+    if(total<0){
+        return `Faltará R$ ${-(total).toFixed(2)} para a compra ser realizada.`
     }
-    return `O saldo restante após a compra será de R$ ${(saldo - total).toFixed(2)}.`
+    return `O saldo restante após a compra será de R$ ${(total).toFixed(2)}.`
 }
 
-console.log(saldoFinal(preços,50))
+console.log(saldoFinal(preços,54))
+
+console.log(array5.reduce(calculo,100))
