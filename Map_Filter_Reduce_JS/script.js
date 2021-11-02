@@ -20,3 +20,17 @@ let foreach1 = array1.forEach((item) => item * 2) //Aqui os valores são lançad
 
 console.log(map1)
 console.log(foreach1)
+
+
+//------------------------------------------------------\\
+// AULA 02 - FILTER 
+
+// Filter é um método que filtra um array de acordo com determinada condição, e retorna um novo array que segue essa condição.
+
+//Sintaxe do filter é identica ao do map: array.filter(callback, thisArg)
+
+//Exemplo
+
+const filter1 = array1.filter((item) => item % 2 == 0)
+
+console.log(filter1)
