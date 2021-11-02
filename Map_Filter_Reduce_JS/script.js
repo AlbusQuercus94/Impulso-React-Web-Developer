@@ -82,3 +82,12 @@ for(x in numeros){
 
 console.log(tabuadaSemThis(array3, 4))
 
+// --------------------------------------------------\\
+// ATIVIDADE 2 - FILTER 
+/*Filtre e retorne todos os números pares de um array. */
+
+let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+const filter2 = array4.filter((item) => item % 2 == 0)
+const filter3 = array4.filter((item) => item % 2 !== 0)
+console.log('No array', array4, '\nos números pares são:\n', filter2, '\ne os ímpares são:\n', filter3)
