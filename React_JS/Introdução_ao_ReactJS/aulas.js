@@ -1,0 +1,35 @@
+// Parte 1 - História e Conceitos
+/*
+Criado em 2011 por Jordan Walke no Facebook
+Baseado no XHP, um framework para criação de HTML no PHP
+Utilizado no mural de notícias da ferramenta.
+
+2012 - Utilizando no Instagram
+2013 - Anúncio para liberação Open Source na JS Conf US
+2015 - React Native
+2015 - UWP (Universal Windows Platform) uma aplicação react para aplicações desktop
+
+*/
+
+//React é uma biblioteca e não um framework;
+//Principal função é a criação da interface para o usuário.
+//React vem com muita componentização.
+//React é uma linguagem declarativa
+//Declarativa vs Imperativa
+//React está preocupado apenas com o que é exibido na interface do usuário.
+// React é baseado em components
+
+//Parte 2 - Configurando o React
+
+//Tem 3 formas de configurar o React JS:
+/*
+    React Create App
+    React Scripts
+    Task Runners e Bundler Sizers
+*/
+
+//O que é JSX
+//React não separa as tecnologias colocando marcação em arquivos separados, e sim separa conceitos e mantém o código pouco acoplado chamando-os de componentes.
+//Não é obrigatório a utilização do JSX
+//JSX é uma sintax sugar para React.createElement
+//O browser não interpreta o JSX, para isso é necessário um transpilador para que a palicaçõ possa entender o código. O mais utilizado é o babel.
