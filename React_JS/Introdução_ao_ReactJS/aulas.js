@@ -48,4 +48,30 @@ Utilizado no mural de notícias da ferramenta.
 */
 
 //Boa pratica na criação de um novo arquivo componente é usar o CamelCase para o nome
-//Outra boa pratica dos componentes é eles serem mais abstrado possível, sem estado, sem manipulação de dados,
+//Outra boa pratica dos componentes é eles serem mais abstrado possível, sem estado, sem manipulação de dados.
+
+
+// ----------------------------------------------\\
+// PARTE 04 - ESTADO E CICLO DE VIDA 
+
+/*O Ciclo de Vida do React são as seguintes estados:
+    Inicialização
+    Montagem
+    Atualização
+    Desmontagem
+*/
+
+//Nenhum componente pai ou filho devem saber se outro componente possui estado ou não.
+//O estado é apenas local ao componente e caso seja necessário enviar algum atributo para outro, então é feito via props.
+
+// Ecossistema do React 
+/*
+    React Router;
+    Redux
+    Material UI
+    Ant Design
+    Storybook
+    Gatsby
+    Jest
+    React i18n Next
+*/
