@@ -4,6 +4,7 @@ import Button from './Components/Parte_1/Button'
 import ComponentA from './Components/Parte_1/ComponentA';
 import ComponentB from './Components/Parte_1/ComponentB';
 import Clock from './Components/Parte_1/Clock';
+import Client from './Components/Parte_5/Cliente';
 
 
 function soma (a, b){
@@ -40,11 +41,63 @@ function parte_1(){
   )
 }
 
+function parte_5(){
+  const hasCostumer = true;
+  
+  function renderHistory(){
+    return(
+      <div>
+        <p>Clique o botão abaixo para visualizar o histórico de clientes.</p>
+        <Button onClick={() => console.log('Funfou')} name="Client's de history"/>
+      </div>
+    )
+  }
+  function renderAdd(){
+    return(
+      <div>
+        <p>Clique o botão abaixo para visualizar o histórico de clientes.</p>
+        <Button onClick={() => console.log('Funfou')} name='Add new client'/>
+        {showClient()}{/*Como o Show Client returna null se HasCostumer é false, então ele não é renderizado, mesmo sendo chamado. */}
+      </div>
+    )
+  }
+  function showClient(){
+    if(!hasCostumer) return null;
+    return(
+      <div>
+        <Client gender='Male' name='Pedro' age='27'/>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      <p>Aula de Renderização de Condicionais</p>
+      <p>Aula assistida na Digital Innovation One</p>
+      <br/>
+      {/*If Inline begin */}
+      {hasCostumer && (
+        <div>
+            <p>Clique o botão abaixo para visualizar o histórico de clientes.</p>
+            <Button onClick={() => console.log('Funfou')} name='Historico de Cliente'/>
+            {showClient()}
+        </div>
+      )}
+      {/*If Inline ends */}
+
+      {/*If Else inline begins */}
+      {hasCostumer? renderHistory() : renderAdd() }
+      {/*If Else inline ends */}
+
+    </div>
+  )
+}
+
 //Função Principal
 function App() {
   return (
     <div>
-      {parte_1()}
+      {parte_5()}
     </div>
   );
 }

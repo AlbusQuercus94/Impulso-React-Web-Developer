@@ -75,3 +75,14 @@ Utilizado no mural de notícias da ferramenta.
     Jest
     React i18n Next
 */
+
+//--------------------------------------------------------------------
+// PARTE 05 - RENDERIZAÇÃO CONDICIONAL
+//Em React, você pode criar componentes distintos que encapsulam o comportamento que você precisa. Então, você pode renderizar apenas alguns dos elementos,  dependendo do estado da sua aplicação.
+
+/*
+    Variáveis de Elementos
+    If inline com operador lógico &&
+    If else inline com operador condicional
+    Evitando que um componente seja renderizado
+*/
