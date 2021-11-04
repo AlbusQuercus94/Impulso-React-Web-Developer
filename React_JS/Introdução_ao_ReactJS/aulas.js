@@ -86,3 +86,13 @@ Utilizado no mural de notícias da ferramenta.
     If else inline com operador condicional
     Evitando que um componente seja renderizado
 */
+
+// ----------------------------------------
+// PARTE 06 - LISTAS E CHAVES
+/*
+    Renderizando Multiplos Componentes
+    Componente de lista Básico
+    Chaves
+    Extraindo Componentes com Chaves
+    Chaves devem ser únicas apenas entre elementos irmãos.
+*/

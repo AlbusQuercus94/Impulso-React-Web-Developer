@@ -89,11 +89,50 @@ function parte_5(){
   )
 }
 
+function parte_6(){
+  const customers = [
+    {
+      id: 1,
+      name:'Garnet Dil'
+    },
+    {
+      id: 2,
+      name: 'Vivi'
+    },
+    {
+      id: 3,
+      name: 'Zidane'
+    },
+    {
+      id: 4,
+      name:'Steiner'
+    }
+  ]
+  /*Renderizando Multiplos Elementos Início */
+  function renderCustomers(customer,index){
+    return (
+      <li>Customer: {customer.name} - Position: {index + 1}</li>
+    )
+  }
+  /*Renderizando Multiplos Elementos Fim */
+  return(
+    <div>
+      <p>Aula de Renderização de Condicionais</p>
+      <p>Aula assistida na Digital Innovation One</p>
+      <div>
+        <ul>
+          {customers.map(renderCustomers)}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
 //Função Principal
 function App() {
   return (
     <div>
-      {parte_5()}
+      {parte_6()}
     </div>
   );
 }
