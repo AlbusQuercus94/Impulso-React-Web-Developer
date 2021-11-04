@@ -44,23 +44,19 @@ function parte_1(){
 function parte_5(){
   const hasCostumer = true;
   
-  function renderHistory(){
-    return(
+  const renderHistory = (
       <div>
         <p>Clique o botão abaixo para visualizar o histórico de clientes.</p>
         <Button onClick={() => console.log('Funfou')} name="Client's de history"/>
       </div>
     )
-  }
-  function renderAdd(){
-    return(
+  const renderAdd = (
       <div>
-        <p>Clique o botão abaixo para visualizar o histórico de clientes.</p>
+        <p>Clique o botão abaixo para adicionar um clientes.</p>
         <Button onClick={() => console.log('Funfou')} name='Add new client'/>
         {showClient()}{/*Como o Show Client returna null se HasCostumer é false, então ele não é renderizado, mesmo sendo chamado. */}
       </div>
     )
-  }
   function showClient(){
     if(!hasCostumer) return null;
     return(
@@ -86,7 +82,7 @@ function parte_5(){
       {/*If Inline ends */}
 
       {/*If Else inline begins */}
-      {hasCostumer? renderHistory() : renderAdd() }
+      {hasCostumer? renderHistory : renderAdd }
       {/*If Else inline ends */}
 
     </div>
