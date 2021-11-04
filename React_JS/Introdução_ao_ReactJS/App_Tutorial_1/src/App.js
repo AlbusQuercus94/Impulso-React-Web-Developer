@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Button from './Components/Button'
-import ComponentA from './Components/ComponentA';
-import ComponentB from './Components/ComponentB';
-import Clock from './Components/Clock';
+import Button from './Components/Parte_1/Button'
+import ComponentA from './Components/Parte_1/ComponentA';
+import ComponentB from './Components/Parte_1/ComponentB';
+import Clock from './Components/Parte_1/Clock';
 
 
 function soma (a, b){
@@ -19,8 +19,7 @@ function myName (){
     </div>
   )}
 
-//Função Principal
-function App() {
+function parte_1(){
   return (
     <div>
       <div className="container">
@@ -37,6 +36,15 @@ function App() {
       <div className='clock'>
         <Clock></Clock>
       </div>
+    </div>
+  )
+}
+
+//Função Principal
+function App() {
+  return (
+    <div>
+      {parte_1()}
     </div>
   );
 }
