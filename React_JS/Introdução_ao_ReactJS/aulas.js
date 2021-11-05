@@ -109,3 +109,15 @@ Utilizado no mural de notícias da ferramenta.
     Eventos
     Passando argumentos para manipuladores de eventos.
 */
+
+//---------------------------------
+//Dicas
+/*
+Comece com um Mock
+Separe a UI em uma hierarquia de componentes
+    Um componente só deve, idealmente, fazer uma única coisa.
+Crie uma versão estática em react
+Identifique a representação mínima (mas completa) do state da UI
+Identifique onde o state deve ficar
+Adicione o fluxo de dados inverso
+*/
