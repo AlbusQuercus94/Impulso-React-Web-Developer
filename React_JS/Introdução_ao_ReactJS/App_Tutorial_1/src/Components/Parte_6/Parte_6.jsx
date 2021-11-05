@@ -1,6 +1,6 @@
 import React from "react"
 
-function Parte_6(){
+function Parte6(){
     const customers = [
       {
         id: 1,
@@ -63,4 +63,4 @@ function Parte_6(){
     )
 }
 
-export default Parte_6
+export default Parte6

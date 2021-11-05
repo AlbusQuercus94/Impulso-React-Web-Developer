@@ -96,3 +96,16 @@ Utilizado no mural de notícias da ferramenta.
     Extraindo Componentes com Chaves
     Chaves devem ser únicas apenas entre elementos irmãos.
 */
+
+//----------------------------------------
+//PARTE 07 - MANIPULANDO EVENTOS
+//Manipular eventos em elementos React é muito semelhrante a manipular eventes em elementos do DOM.
+/*Extistem algumas diferenças sintáticas:
+    -Eventos em React são nomeados usando cmelCase ao invés de letasminúsculas.
+    -Com o JSX você passa uma função como manipulador de eventos ao invés de um texto.
+*/
+
+/*O que é ensinado:
+    Eventos
+    Passando argumentos para manipuladores de eventos.
+*/
