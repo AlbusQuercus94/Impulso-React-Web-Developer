@@ -5,3 +5,9 @@
     A pasta node modules pode ser excluida e readicionada através do comando npm i no terminal
     O arquivo gitignore é um arquivo que mostra quais os arquivos e pastas não serão enviados para o github no push.
 */
+
+//PARTE 2 - HELLO WORLD
+
+//Não houve nenhuma parte escrita, apenas prática.
+//O que aprendi na aula foi quais os elementos padrão que podem ser apagados do app sem criar erros, o que não são necessários para o aprendizado no momento.
+//Eu fiz diferente da aula, pra deixar um padrão do que eu posso fazer, mas na aula foi apenas ensinando onde se escreve o código para aparecer na tela.
