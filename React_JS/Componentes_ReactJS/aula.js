@@ -18,3 +18,6 @@
 
 //Nessa aula começou o uso do bootstrap. O link para o uso de bootstrap css é posto na head o index.html na pasta PUBLIC.
 //O mesmo se faz com o bundle Bootstrap, mas por se tratar de um arquivo script, é posto no final do body. O bundle é pra personalizar menus.
+
+// PARTE 4 - PROPS
+//Nessa aula é ensinado o uso do props e como chamar variáveis dentro do return, o que é o props.children
