@@ -11,3 +11,10 @@
 //Não houve nenhuma parte escrita, apenas prática.
 //O que aprendi na aula foi quais os elementos padrão que podem ser apagados do app sem criar erros, o que não são necessários para o aprendizado no momento.
 //Eu fiz diferente da aula, pra deixar um padrão do que eu posso fazer, mas na aula foi apenas ensinando onde se escreve o código para aparecer na tela.
+
+//PARTE 3 - ESTRUTURA DE UM COMPONENTE
+
+//O return não permite trablhar com tags irmãs. Para isso é envelopa-los em um div, ou trabalhar react fragment (tags vazias <></>).
+
+//Nessa aula começou o uso do bootstrap. O link para o uso de bootstrap css é posto na head o index.html na pasta PUBLIC.
+//O mesmo se faz com o bundle Bootstrap, mas por se tratar de um arquivo script, é posto no final do body. O bundle é pra personalizar menus.
