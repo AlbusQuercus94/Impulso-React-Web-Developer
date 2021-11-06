@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 
-function Parte3() {
+function Parte4() {
   return(
       <>
         <h1>Hello, World!</h1>
@@ -16,4 +16,4 @@ function Parte3() {
     )  
 }
 
-export default Parte3
+export default Parte4
