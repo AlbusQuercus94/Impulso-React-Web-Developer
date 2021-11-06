@@ -21,3 +21,11 @@
 
 // PARTE 4 - PROPS
 //Nessa aula é ensinado o uso do props e como chamar variáveis dentro do return, o que é o props.children
+
+//PARTE 5 - USE STATE
+//Quando inicializado, tudo que é inicializado é armazenado numa memória da aplicação. Uma dessas memórias é o state, que é temporária.
+
+//State serve para criar componentes, funções, efeitos dinanimos e animações.
+
+//Nessa aula também aprendi como usar funções e o useState.
+//Também nessa aula ensina uma boa prática: separa os atributos das tags por linha.
