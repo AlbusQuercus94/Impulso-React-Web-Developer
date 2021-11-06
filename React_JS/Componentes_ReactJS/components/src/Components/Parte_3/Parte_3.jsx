@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item";
 
 function Parte3() {
   return(
@@ -7,7 +8,7 @@ function Parte3() {
         <p>My first React aplication</p>
         <p>I'm programming with ReactJS</p>
         <ul className='list-group'>
-            <li><a href="#" className="list-group-item list-group-item-action list-group-item-info">First Item</a></li>
+            <Item/>
             <li><a href="#" className="list-group-item list-group-item-action list-group-item-info">Second Item</a></li>
             <li><a href="#" className="list-group-item list-group-item-action list-group-item-info">Third Item</a></li>
         </ul>
