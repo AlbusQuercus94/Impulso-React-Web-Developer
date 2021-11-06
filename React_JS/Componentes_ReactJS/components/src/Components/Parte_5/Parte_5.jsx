@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import Card from "./Card";
 
-function Parte4() {
+function Parte5() {
   return(
       <>
         <h1>Hello, World!</h1>
@@ -18,4 +18,4 @@ function Parte4() {
     )  
 }
 
-export default Parte4
+export default Parte5
