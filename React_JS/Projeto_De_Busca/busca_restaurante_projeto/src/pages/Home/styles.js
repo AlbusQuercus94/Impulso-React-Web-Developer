@@ -28,3 +28,12 @@ padding: 2%;
 export const Wrapper = styled.div`
     display: flex;
 `
+
+export const CarouselTitle = styled.h1`
+    font-family: ${(props) => props.theme.fonts.regular};
+    color: ${(props) => props.theme.colors.text};
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+    margin: 3% 0
+`
