@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 import logo from "../../assets/logo.svg"
 import restaurante from "../../assets/restaurante-fake.png"
-import {Card} from "../../components";
+import * as Component from "../../components";
 
 import * as Style from "./styles";
 
@@ -39,13 +39,14 @@ const Home = () => {
                         Search Results
                     </Style.CarouselTitle>
                     <Style.Carousel {...settings}>
-                        <Card photo={restaurante} title={`Restaurant's Name`}/>
-                        <Card photo={restaurante} title={`Restaurant's Name`}/>
-                        <Card photo={restaurante} title={`Restaurant's Name`}/>
-                        <Card photo={restaurante} title={`Restaurant's Name`}/>
-                        <Card photo={restaurante} title={`Restaurant's Name`}/>
+                        <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
+                        <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
+                        <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
+                        <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
+                        <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
                     </Style.Carousel>
                 </Style.Search>
+                <Component.RestaurantCard></Component.RestaurantCard>
             </Style.Container>
             <Style.Map/>
         </Style.Wrapper>
