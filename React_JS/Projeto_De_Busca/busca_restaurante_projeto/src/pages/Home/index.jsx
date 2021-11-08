@@ -12,6 +12,8 @@ import * as Style from "./styles";
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
+    const [modalOpened, setModalOpened] = useState(false)
+
     const settings = {
         dots: false,
         infinite: true,
@@ -45,10 +47,14 @@ const Home = () => {
                         <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
                         <Component.Card photo={restaurante} title={`Restaurant's Name`}/>
                     </Style.Carousel>
+                    <button onClick={() => setModalOpened(true)}>Open Modal</button>
                 </Style.Search>
                 <Component.RestaurantCard></Component.RestaurantCard>
             </Style.Container>
             <Style.Map/>
+            <Component.Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}>
+            
+            </Component.Modal>
         </Style.Wrapper>
     )
 }
