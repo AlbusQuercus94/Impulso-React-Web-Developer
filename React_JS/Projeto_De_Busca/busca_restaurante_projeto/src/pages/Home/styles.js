@@ -16,7 +16,7 @@ export const Container = styled.aside
 background-color: ${(props) => props.theme.colors.background};
 height: 100vh;
 overflow-y: auto;
-width: 550px;
+width: 360px;
 `;
 
 export const Logo = styled.img`

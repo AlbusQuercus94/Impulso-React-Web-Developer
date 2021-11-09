@@ -51,7 +51,8 @@ const Home = () => {
                 </Style.Search>
                 <Component.RestaurantCard></Component.RestaurantCard>
             </Style.Container>
-            <Style.Map/>
+            {/* <Style.Map/> */}
+            <Component.Map/>
             <Component.Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}>
             
             </Component.Modal>
