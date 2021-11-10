@@ -11,7 +11,8 @@ import * as Component from "../../components";
 import * as Style from "./styles";
 
 const Home = () => {
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue, setInputValue] = useState('');
+    const [query, setQuery] = useState(null)
     const [modalOpened, setModalOpened] = useState(false)
 
     const settings = {
@@ -22,6 +23,13 @@ const Home = () => {
         slidesToScroll: 4,
         adaptiveHeight: true
     }
+
+    function handleKeyPress(e){
+        if(e.key === 'Enter'){
+            setQuery(inputValue);
+        }
+    }
+
     return(
         <Style.Wrapper>
             <Style.Container>
@@ -35,6 +43,7 @@ const Home = () => {
                     >
                         <Input
                         value={inputValue}
+                        onKeyPress={handleKeyPress}
                         onChange={(e) => setInputValue(e.target.value)} />
                     </TextField>
                     <Style.CarouselTitle>
@@ -52,7 +61,7 @@ const Home = () => {
                 <Component.RestaurantCard></Component.RestaurantCard>
             </Style.Container>
             {/* <Style.Map/> */}
-            <Component.Map/>
+            <Component.Map query={query}/>
             <Component.Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}>
             
             </Component.Modal>
