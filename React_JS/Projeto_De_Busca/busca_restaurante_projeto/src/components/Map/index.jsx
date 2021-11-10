@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from "react";
+import { useDispatch } from react-redux
 import { GoogleApiWrapper, Map } from "google-maps-react";
+import { useDispatch } from "react-redux";
+
+import { setRestaurants } from "../../redux/modules.restaurants";
 
 export const MapContainer = (props) => {
     const [map, setMap] = useState({});
@@ -11,7 +15,6 @@ export const MapContainer = (props) => {
 
     function searchByQuery(query){
         const service = new google.maps.places.PlacesService(map);
-        console.log('passou2')
         const request = {
             location: map.center,
             radius: '200',
@@ -28,7 +31,6 @@ export const MapContainer = (props) => {
 
     function searchNearby(map, center){
         const service = new google.maps.places.PlacesService(map);
-        console.log('passou3')
         const request = {
             location: center,
             radius: '20000',
@@ -38,6 +40,7 @@ export const MapContainer = (props) => {
         service.nearbySearch(request, (results, status) =>{
             if (status === google.maps.places.PlacesServiceStatus.OK){
                 console.log('Restaurantes:',results)
+                dispatch()
             }
         });
     }
