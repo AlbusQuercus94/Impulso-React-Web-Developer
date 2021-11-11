@@ -46,3 +46,21 @@ export const Carousel = styled(Slider)`
 export const Wrapper = styled.div`
     display: flex;
 `
+
+export const ModalTitle = styled.p`
+font-family: ${(props) => props.theme.fonts.regular};
+color: ${(props) => props.theme.colors.text};
+font-size: 24px;
+font-weight: bold;
+line-height: 29px;
+margin: 3% 0
+`
+
+export const ModalContent = styled.p`
+font-family: ${(props) => props.theme.fonts.regular};
+color: ${(props) => props.theme.colors.text};
+font-size: 16px;
+font-weight: normal;
+line-height: 19px;
+margin: 3% 0
+`

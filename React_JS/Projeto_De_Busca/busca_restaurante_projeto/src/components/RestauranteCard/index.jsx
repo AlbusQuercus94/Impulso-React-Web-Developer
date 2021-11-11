@@ -4,21 +4,21 @@ import restaurante from "../../assets/restaurante-fake.png"
 
 import * as Style from './styles'
 
-const RestaurantCard = () => {
+const RestaurantCard = ({restaurant, onClick}) => {
     return(
-        <Style.Restaurant>
+        <Style.Restaurant onClick={onClick}>
             <Style.RestaurantInfo>
-                <Style.Title>Restaurant's Name</Style.Title>
+                <Style.Title>{restaurant.name}</Style.Title>
                 <ReactStars 
                 activeColor={'purple'}
                 count={5}
                 edit={false}
                 isHalf
-                value={4}
+                value={restaurant.rating}
                 />
-                <Style.Adress>Street, Num 150</Style.Adress>
+                <Style.Adress>{restaurant.vicinity || restaurant.formatted_address}</Style.Adress>
             </Style.RestaurantInfo>
-            <Style.RestaurantImage src={restaurante} alt={`Restaurant's image`}/>
+            <Style.RestaurantImage src={restaurant.photos ? restaurant.photos[0].getUrl() : restaurant } alt={`Restaurant's image`}/>
         </Style.Restaurant>
     )
 }
