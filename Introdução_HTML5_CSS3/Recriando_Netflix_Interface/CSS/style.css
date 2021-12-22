@@ -142,3 +142,26 @@ main #lancamento .descricao{
 .catalogo .owl-theme .item .opcao:hover{
     transform: scale(1.05);
 }
+
+/* -------------------------------------------------------------------- */
+#generos .item figcaption{
+    display: inline-block;
+    width: calc(100% - 22px);
+    font-weight: bolder;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    top: calc(50% - 13.5px);
+} */
+#generos .item figcaption:hover{
+    opacity: rgba(0, 0, 0, 0.5);
+}
+
+#generos .owl-theme .item:hover{
+    transform: scale(1.20);
+}
+
+#generos .owl-theme .item:hover > .opcao{
+    opacity: 0.3;
+}
