@@ -9,13 +9,39 @@
     
     main #lancamento .descricao{
         background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+    .container-lancamento{
+        height: 66vw;
+    }
+
+    #lancamento .descricao p,
+    #lancamento .descricao h3{
+        order: 1;
+        display: none;
+        z-index: -1;
+    }
+
+    #generos .item .opcao{
+        opacity: 0.5;
+    }
+    #generos .item figcaption{
+        font-size: large;
+    }
+
 }
 
 @media (max-width: 600px) {
 
     #inicio{
         flex-direction: column;
+    }
+
+    .container-lancamento{
+        height: 66vw;
     }
 
     #lancamento .descricao{
